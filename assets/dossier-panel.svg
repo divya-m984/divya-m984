@@ -1,0 +1,504 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520"
+     role="img" aria-label="Animated technical identity dossier for Divya M, multidisciplinary developer">
+  <defs>
+    <!-- Grid -->
+    <pattern id="pg" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0 L0 0 0 20" fill="none" stroke="#29334F" stroke-width="0.4"/>
+    </pattern>
+    <!-- Progress gradient -->
+    <linearGradient id="prg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#28D7FE"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <!-- Violet glow -->
+    <radialGradient id="vg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#8B5CF6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Cyan glow -->
+    <radialGradient id="cg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#28D7FE" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#28D7FE" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Scanline glow gradient (vertical) -->
+    <linearGradient id="slg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#28D7FE" stop-opacity="0"/>
+      <stop offset="40%"  stop-color="#28D7FE" stop-opacity="0.05"/>
+      <stop offset="50%"  stop-color="#28D7FE" stop-opacity="0.08"/>
+      <stop offset="60%"  stop-color="#28D7FE" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#28D7FE" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Clip for content area -->
+    <clipPath id="cc">
+      <rect x="9" y="50" width="982" height="461"/>
+    </clipPath>
+
+    <style>
+      @keyframes blink  { 0%,48%{opacity:1} 50%,98%{opacity:0} 100%{opacity:1} }
+      @keyframes dotpls { 0%,100%{opacity:1} 50%{opacity:0.18} }
+      @keyframes glow   { 0%,100%{opacity:0.15} 50%{opacity:0.35} }
+      @keyframes flick  { 0%,91%,100%{opacity:1} 92%{opacity:0.3} 95%{opacity:0.75} 97%{opacity:0.4} 99%{opacity:1} }
+      .cur  { animation: blink  1s   step-start infinite; }
+      .dp1  { animation: dotpls 2s   ease-in-out infinite; }
+      .dp2  { animation: dotpls 2s   ease-in-out 0.6s  infinite; }
+      .dp3  { animation: dotpls 2s   ease-in-out 1.2s  infinite; }
+      .dp4  { animation: dotpls 2s   ease-in-out 1.8s  infinite; }
+      .bgv  { animation: glow   6s   ease-in-out infinite; }
+      .bgc  { animation: glow   8s   ease-in-out 2s infinite; }
+      .flic { animation: flick  4.5s step-end    infinite; }
+    </style>
+  </defs>
+
+  <!-- ── BACKGROUND ─────────────────────────────────────────── -->
+  <rect width="1000" height="520" fill="#070A12"/>
+  <rect width="1000" height="520" fill="url(#pg)" opacity="0.5"/>
+  <!-- Ambient glows -->
+  <ellipse cx="510" cy="210" rx="200" ry="180" fill="url(#vg)" class="bgv"/>
+  <ellipse cx="180" cy="290" rx="160" ry="140" fill="url(#cg)" class="bgc"/>
+
+  <!-- ── OUTER FRAME ────────────────────────────────────────── -->
+  <rect x="8" y="8" width="984" height="504" fill="none" stroke="#28D7FE" stroke-width="0.8" opacity="0.5"/>
+  <!-- Corner L-brackets -->
+  <path d="M8,8 L44,8 M8,8 L8,44"     fill="none" stroke="#28D7FE" stroke-width="2"/>
+  <path d="M992,8 L956,8 M992,8 L992,44"   fill="none" stroke="#28D7FE" stroke-width="2"/>
+  <path d="M8,512 L44,512 M8,512 L8,468"   fill="none" stroke="#28D7FE" stroke-width="2"/>
+  <path d="M992,512 L956,512 M992,512 L992,468" fill="none" stroke="#28D7FE" stroke-width="2"/>
+
+  <!-- ── HEADER BAR ─────────────────────────────────────────── -->
+  <rect x="8" y="8" width="984" height="40" fill="#0B1020" opacity="0.95"/>
+  <line x1="8" y1="48" x2="992" y2="48" stroke="#28D7FE" stroke-width="0.7" opacity="0.5"/>
+
+  <text x="22" y="32" font-family="monospace,Courier New,Courier" font-size="10"
+        fill="#28D7FE" letter-spacing="3">SUBJECT A-14</text>
+  <text x="133" y="32" font-family="monospace,Courier New,Courier" font-size="10"
+        fill="#29334F">//</text>
+  <text x="152" y="32" font-family="monospace,Courier New,Courier" font-size="10"
+        fill="#9AA7C7" letter-spacing="2">IDENTITY RECORD</text>
+
+  <!-- Classification badge -->
+  <rect x="796" y="16" width="192" height="20" fill="#8B5CF6" opacity="0.12" rx="2"/>
+  <rect x="796" y="16" width="192" height="20" fill="none" stroke="#8B5CF6" stroke-width="0.6" rx="2"/>
+  <text x="892" y="30" font-family="monospace,Courier New,Courier" font-size="8"
+        fill="#8B5CF6" text-anchor="middle" letter-spacing="2">CLASSIFICATION: TS-DEV</text>
+
+  <!-- System ID -->
+  <text x="790" y="32" font-family="monospace,Courier New,Courier" font-size="8"
+        fill="#29334F" text-anchor="end">SYS-ID: DM-984-&#x03B1;</text>
+
+  <!-- ── PANEL DIVIDERS ─────────────────────────────────────── -->
+  <line x1="362" y1="49" x2="362" y2="512" stroke="#29334F" stroke-width="0.8"/>
+  <line x1="662" y1="49" x2="662" y2="512" stroke="#29334F" stroke-width="0.8"/>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LEFT PANEL  x:8–362  — IDENTITY RECORD
+       ═══════════════════════════════════════════════════════ -->
+  <rect x="9" y="49" width="353" height="462" fill="#0B1020" opacity="0.5"/>
+
+  <!-- NAME -->
+  <text x="24" y="78" font-family="monospace,Courier New,Courier" font-size="8"
+        fill="#8B5CF6" letter-spacing="3">NAME</text>
+  <text x="24" y="97" font-family="monospace,Courier New,Courier" font-size="19"
+        fill="#F4F7FF" font-weight="bold" letter-spacing="2">DIVYA M</text>
+  <line x1="24" y1="106" x2="348" y2="106" stroke="#29334F" stroke-width="0.5"/>
+
+  <!-- HANDLE -->
+  <text x="24" y="120" font-family="monospace,Courier New,Courier" font-size="8"
+        fill="#8B5CF6" letter-spacing="3">HANDLE</text>
+  <text x="24" y="137" font-family="monospace,Courier New,Courier" font-size="13"
+        fill="#28D7FE" letter-spacing="1">divya-m984</text>
+  <line x1="24" y1="146" x2="348" y2="146" stroke="#29334F" stroke-width="0.5"/>
+
+  <!-- CLASSIFICATION -->
+  <text x="24" y="160" font-family="monospace,Courier New,Courier" font-size="8"
+        fill="#8B5CF6" letter-spacing="3">CLASSIFICATION</text>
+  <text x="24" y="176" font-family="monospace,Courier New,Courier" font-size="11"
+        fill="#F4F7FF" letter-spacing="1">MULTIDISCIPLINARY</text>
+  <text x="24" y="191" font-family="monospace,Courier New,Courier" font-size="11"
+        fill="#F4F7FF" letter-spacing="1">DEVELOPER</text>
+  <line x1="24" y1="200" x2="348" y2="200" stroke="#29334F" stroke-width="0.5"/>
+
+  <!-- SYSTEM -->
+  <text x="24" y="214" font-family="monospace,Courier New,Courier" font-size="8"
+        fill="#8B5CF6" letter-spacing="3">SYSTEM</text>
+  <text x="24" y="229" font-family="monospace,Courier New,Courier" font-size="10"
+        fill="#6E8EFF" letter-spacing="1">ARCH LINUX // HYPRLAND</text>
+  <line x1="24" y1="238" x2="348" y2="238" stroke="#29334F" stroke-width="0.5"/>
+
+  <!-- PRIMARY DOMAINS -->
+  <text x="24" y="252" font-family="monospace,Courier New,Courier" font-size="8"
+        fill="#8B5CF6" letter-spacing="3">PRIMARY DOMAINS</text>
+
+  <circle cx="30" cy="265" r="2.5" fill="#28D7FE"/>
+  <text x="40" y="269" font-family="monospace,Courier New,Courier" font-size="9"
+        fill="#9AA7C7" letter-spacing="1">SOFTWARE SYSTEMS</text>
+
+  <circle cx="30" cy="281" r="2.5" fill="#28D7FE"/>
+  <text x="40" y="285" font-family="monospace,Courier New,Courier" font-size="9"
+        fill="#9AA7C7" letter-spacing="1">MACHINE LEARNING</text>
+
+  <circle cx="30" cy="297" r="2.5" fill="#28D7FE"/>
+  <text x="40" y="301" font-family="monospace,Courier New,Courier" font-size="9"
+        fill="#9AA7C7" letter-spacing="1">MLOPS</text>
+
+  <circle cx="30" cy="313" r="2.5" fill="#28D7FE"/>
+  <text x="40" y="317" font-family="monospace,Courier New,Courier" font-size="9"
+        fill="#9AA7C7" letter-spacing="1">LINUX INFRASTRUCTURE</text>
+
+  <circle cx="30" cy="329" r="2.5" fill="#28D7FE"/>
+  <text x="40" y="333" font-family="monospace,Courier New,Courier" font-size="9"
+        fill="#9AA7C7" letter-spacing="1">REAL-TIME SYSTEMS</text>
+
+  <line x1="24" y1="342" x2="348" y2="342" stroke="#29334F" stroke-width="0.5"/>
+
+  <!-- IMPACT DOMAINS -->
+  <text x="24" y="356" font-family="monospace,Courier New,Courier" font-size="8"
+        fill="#8B5CF6" letter-spacing="3">IMPACT DOMAINS</text>
+
+  <circle cx="30" cy="369" r="2.5" fill="#6E8EFF"/>
+  <text x="40" y="373" font-family="monospace,Courier New,Courier" font-size="9"
+        fill="#9AA7C7" letter-spacing="1">MARINE TECHNOLOGY</text>
+
+  <circle cx="30" cy="385" r="2.5" fill="#6E8EFF"/>
+  <text x="40" y="389" font-family="monospace,Courier New,Courier" font-size="9"
+        fill="#9AA7C7" letter-spacing="1">SUSTAINABILITY</text>
+
+  <circle cx="30" cy="401" r="2.5" fill="#6E8EFF"/>
+  <text x="40" y="405" font-family="monospace,Courier New,Courier" font-size="9"
+        fill="#9AA7C7" letter-spacing="1">CYBERSECURITY</text>
+
+  <line x1="24" y1="414" x2="348" y2="414" stroke="#29334F" stroke-width="0.5"/>
+
+  <!-- CURRENT STATUS -->
+  <text x="24" y="428" font-family="monospace,Courier New,Courier" font-size="8"
+        fill="#8B5CF6" letter-spacing="3">CURRENT STATUS</text>
+
+  <!-- Pulsing dot -->
+  <circle cx="30" cy="447" r="5" fill="#28D7FE" class="dp1"/>
+  <!-- Active label with flicker -->
+  <text x="42" y="452" font-family="monospace,Courier New,Courier" font-size="13"
+        fill="#28D7FE" class="flic">ACTIVE</text>
+  <text x="107" y="452" font-family="monospace,Courier New,Courier" font-size="13"
+        fill="#9AA7C7">/</text>
+  <text x="120" y="452" font-family="monospace,Courier New,Courier" font-size="13"
+        fill="#F4F7FF">BUILDING</text>
+  <!-- Blinking cursor -->
+  <rect x="218" y="439" width="7" height="14" fill="#28D7FE" class="cur"/>
+
+  <!-- Coordinate labels -->
+  <text x="24" y="490" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#29334F">LAT: 13.0827&#xB0;N</text>
+  <text x="24" y="502" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#29334F">LON: 80.2707&#xB0;E</text>
+  <text x="185" y="490" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#29334F">REF: DM-984</text>
+  <text x="185" y="502" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#29334F">VER: 2.4.1</text>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CENTER PANEL  x:362–662  — BIOMETRIC SCAN
+       ═══════════════════════════════════════════════════════ -->
+  <rect x="363" y="49" width="299" height="462" fill="#070A12" opacity="0.35"/>
+
+  <text x="512" y="72" font-family="monospace,Courier New,Courier" font-size="8"
+        fill="#8B5CF6" text-anchor="middle" letter-spacing="3">BIOMETRIC SCAN</text>
+
+  <!-- Aperture center: (512, 210) radius up to 120 -->
+  <!-- Outer structural rings -->
+  <circle cx="512" cy="210" r="122" fill="none" stroke="#29334F" stroke-width="0.4" opacity="0.6"/>
+  <circle cx="512" cy="210" r="110" fill="none" stroke="#29334F" stroke-width="0.5"/>
+  <circle cx="512" cy="210" r="95"  fill="none" stroke="#8B5CF6" stroke-width="0.7" opacity="0.4"/>
+  <circle cx="512" cy="210" r="80"  fill="none" stroke="#29334F" stroke-width="0.5"/>
+  <circle cx="512" cy="210" r="65"  fill="none" stroke="#28D7FE" stroke-width="0.8" opacity="0.45"/>
+  <circle cx="512" cy="210" r="50"  fill="none" stroke="#29334F" stroke-width="0.5"/>
+  <circle cx="512" cy="210" r="35"  fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.55"/>
+  <!-- Inner ring – pulsing -->
+  <circle cx="512" cy="210" r="20"  fill="#0A0E1A" stroke="#28D7FE" stroke-width="1.5">
+    <animate attributeName="r" values="20;22;20" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Core dot -->
+  <circle cx="512" cy="210" r="7" fill="#28D7FE" opacity="0.85">
+    <animate attributeName="opacity" values="0.85;0.4;0.85" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Crosshair lines -->
+  <line x1="512" y1="82"  x2="512" y2="338" stroke="#29334F" stroke-width="0.5" opacity="0.6"/>
+  <line x1="384" y1="210" x2="640" y2="210" stroke="#29334F" stroke-width="0.5" opacity="0.6"/>
+  <!-- Diagonal structural lines -->
+  <line x1="422" y1="122" x2="602" y2="298" stroke="#29334F" stroke-width="0.3" opacity="0.35"/>
+  <line x1="602" y1="122" x2="422" y2="298" stroke="#29334F" stroke-width="0.3" opacity="0.35"/>
+
+  <!-- Crosshair ticks -->
+  <line x1="508" y1="88"  x2="516" y2="88"  stroke="#28D7FE" stroke-width="1" opacity="0.6"/>
+  <line x1="508" y1="100" x2="516" y2="100" stroke="#28D7FE" stroke-width="0.5" opacity="0.3"/>
+  <line x1="508" y1="330" x2="516" y2="330" stroke="#28D7FE" stroke-width="1" opacity="0.6"/>
+  <line x1="508" y1="318" x2="516" y2="318" stroke="#28D7FE" stroke-width="0.5" opacity="0.3"/>
+  <line x1="390" y1="206" x2="390" y2="214" stroke="#28D7FE" stroke-width="1" opacity="0.6"/>
+  <line x1="402" y1="206" x2="402" y2="214" stroke="#28D7FE" stroke-width="0.5" opacity="0.3"/>
+  <line x1="634" y1="206" x2="634" y2="214" stroke="#28D7FE" stroke-width="1" opacity="0.6"/>
+  <line x1="622" y1="206" x2="622" y2="214" stroke="#28D7FE" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Animated scan frame around aperture (perimeter = 4*248 = 992) -->
+  <rect x="390" y="88" width="244" height="244" fill="none" stroke="#28D7FE" stroke-width="1.2"
+        stroke-dasharray="55 937">
+    <animate attributeName="stroke-dashoffset" from="0" to="-992" dur="7s"
+             repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Corner markers (static) -->
+  <path d="M390,88 L410,88 M390,88 L390,108"   fill="none" stroke="#28D7FE" stroke-width="1.8"/>
+  <path d="M634,88 L614,88 M634,88 L634,108"   fill="none" stroke="#28D7FE" stroke-width="1.8"/>
+  <path d="M390,332 L410,332 M390,332 L390,312" fill="none" stroke="#28D7FE" stroke-width="1.8"/>
+  <path d="M634,332 L614,332 M634,332 L634,312" fill="none" stroke="#28D7FE" stroke-width="1.8"/>
+
+  <!-- Coordinate labels at corners -->
+  <text x="393" y="86" font-family="monospace,Courier New,Courier" font-size="7" fill="#8B5CF6">00.00</text>
+  <text x="612" y="86" font-family="monospace,Courier New,Courier" font-size="7" fill="#8B5CF6">12.47</text>
+  <text x="393" y="348" font-family="monospace,Courier New,Courier" font-size="7" fill="#8B5CF6">24.91</text>
+  <text x="612" y="348" font-family="monospace,Courier New,Courier" font-size="7" fill="#8B5CF6">36.82</text>
+
+  <!-- ── FINGERPRINT-LIKE PATTERN ─────── -->
+  <text x="512" y="370" font-family="monospace,Courier New,Courier" font-size="8"
+        fill="#8B5CF6" text-anchor="middle" letter-spacing="3">PATTERN MATCH</text>
+
+  <!-- Abstract ridge arcs -->
+  <path d="M442,420 Q512,380 582,420" fill="none" stroke="#29334F" stroke-width="1.4"/>
+  <path d="M447,430 Q512,386 577,430" fill="none" stroke="#29334F" stroke-width="1.1"/>
+  <path d="M452,440 Q512,392 572,440" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.45"/>
+  <path d="M457,450 Q512,398 567,450" fill="none" stroke="#29334F" stroke-width="0.9"/>
+  <path d="M462,460 Q512,404 562,460" fill="none" stroke="#29334F" stroke-width="0.9"/>
+  <path d="M467,469 Q512,408 557,469" fill="none" stroke="#29334F" stroke-width="0.7"/>
+  <path d="M470,477 Q512,412 554,477" fill="none" stroke="#28D7FE" stroke-width="0.7" opacity="0.35"/>
+  <path d="M474,484 Q512,415 550,484" fill="none" stroke="#29334F" stroke-width="0.6"/>
+
+  <!-- Match indicator -->
+  <text x="512" y="503" font-family="monospace,Courier New,Courier" font-size="8"
+        fill="#28D7FE" text-anchor="middle">[ MATCH: 99.8% ]</text>
+
+  <!-- ═══════════════════════════════════════════════════════
+       RIGHT PANEL  x:662–992  — SIGNAL ANALYSIS
+       ═══════════════════════════════════════════════════════ -->
+  <rect x="663" y="49" width="329" height="462" fill="#0B1020" opacity="0.45"/>
+
+  <text x="676" y="72" font-family="monospace,Courier New,Courier" font-size="8"
+        fill="#8B5CF6" letter-spacing="3">SIGNAL ANALYSIS</text>
+
+  <!-- ── WAVEFORM ──────────────── -->
+  <text x="676" y="90" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#9AA7C7" letter-spacing="2">ACTIVITY WAVEFORM</text>
+  <rect x="676" y="95" width="306" height="60" fill="#070A12" rx="2" opacity="0.8"/>
+  <rect x="676" y="95" width="306" height="60" fill="none" stroke="#29334F" stroke-width="0.5" rx="2"/>
+
+  <!-- Waveform base (static, faint) -->
+  <path d="M676,125 L694,125 L700,108 L707,142 L714,118 L721,134
+           L728,112 L735,140 L742,124 L750,125 L757,108 L764,142
+           L771,116 L778,132 L785,110 L792,140 L800,125 L808,116
+           L815,138 L822,112 L829,128 L836,118 L843,125 L851,108
+           L858,140 L865,118 L872,130 L879,112 L886,125 L895,125
+           L904,116 L911,136 L918,112 L926,138 L933,125 L942,125
+           L950,116 L958,134 L966,114 L974,136 L982,125"
+        fill="none" stroke="#8B5CF6" stroke-width="0.7" opacity="0.25"/>
+
+  <!-- Waveform animated -->
+  <path d="M676,125 L694,125 L700,108 L707,142 L714,118 L721,134
+           L728,112 L735,140 L742,124 L750,125 L757,108 L764,142
+           L771,116 L778,132 L785,110 L792,140 L800,125 L808,116
+           L815,138 L822,112 L829,128 L836,118 L843,125 L851,108
+           L858,140 L865,118 L872,130 L879,112 L886,125 L895,125
+           L904,116 L911,136 L918,112 L926,138 L933,125 L942,125
+           L950,116 L958,134 L966,114 L974,136 L982,125"
+        fill="none" stroke="#28D7FE" stroke-width="1.5"
+        stroke-dasharray="180 500">
+    <animate attributeName="stroke-dashoffset" from="180" to="-180" dur="3.2s"
+             repeatCount="indefinite"/>
+  </path>
+
+  <!-- ── SIGNAL BARS ───────────── -->
+  <text x="676" y="172" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#9AA7C7" letter-spacing="2">SIGNAL STRENGTH</text>
+  <rect x="676" y="177" width="306" height="54" fill="#070A12" rx="2" opacity="0.7"/>
+  <rect x="676" y="177" width="306" height="54" fill="none" stroke="#29334F" stroke-width="0.5" rx="2"/>
+
+  <!-- Vertical EQ bars (staggered heights) -->
+  <rect x="686" y="193" width="8" height="30" fill="#28D7FE" opacity="0.8" rx="1"/>
+  <rect x="699" y="198" width="8" height="25" fill="#28D7FE" opacity="0.7" rx="1"/>
+  <rect x="712" y="185" width="8" height="38" fill="#8B5CF6" opacity="0.85" rx="1"/>
+  <rect x="725" y="204" width="8" height="19" fill="#28D7FE" opacity="0.6" rx="1"/>
+  <rect x="738" y="191" width="8" height="32" fill="#6E8EFF" opacity="0.8" rx="1"/>
+  <rect x="751" y="196" width="8" height="27" fill="#28D7FE" opacity="0.7" rx="1"/>
+  <rect x="764" y="183" width="8" height="40" fill="#8B5CF6" opacity="0.85" rx="1"/>
+  <rect x="777" y="202" width="8" height="21" fill="#28D7FE" opacity="0.6" rx="1"/>
+  <rect x="790" y="194" width="8" height="29" fill="#6E8EFF" opacity="0.75" rx="1"/>
+  <rect x="803" y="188" width="8" height="35" fill="#8B5CF6" opacity="0.8" rx="1"/>
+  <rect x="816" y="200" width="8" height="23" fill="#28D7FE" opacity="0.6" rx="1"/>
+  <rect x="829" y="195" width="8" height="28" fill="#28D7FE" opacity="0.7" rx="1"/>
+  <rect x="842" y="186" width="8" height="37" fill="#8B5CF6" opacity="0.8" rx="1"/>
+  <rect x="855" y="200" width="8" height="23" fill="#28D7FE" opacity="0.6" rx="1"/>
+  <rect x="868" y="193" width="8" height="30" fill="#6E8EFF" opacity="0.7" rx="1"/>
+  <rect x="881" y="190" width="8" height="33" fill="#28D7FE" opacity="0.7" rx="1"/>
+  <rect x="894" y="201" width="8" height="22" fill="#8B5CF6" opacity="0.6" rx="1"/>
+  <rect x="907" y="187" width="8" height="36" fill="#28D7FE" opacity="0.8" rx="1"/>
+  <rect x="920" y="197" width="8" height="26" fill="#6E8EFF" opacity="0.7" rx="1"/>
+  <rect x="933" y="205" width="8" height="18" fill="#28D7FE" opacity="0.55" rx="1"/>
+  <rect x="946" y="192" width="8" height="31" fill="#8B5CF6" opacity="0.7" rx="1"/>
+  <rect x="959" y="196" width="8" height="27" fill="#28D7FE" opacity="0.7" rx="1"/>
+  <rect x="972" y="189" width="8" height="34" fill="#6E8EFF" opacity="0.75" rx="1"/>
+
+  <!-- ── SYSTEM TOPOLOGY ──────── -->
+  <text x="676" y="248" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#9AA7C7" letter-spacing="2">SYSTEM TOPOLOGY</text>
+  <rect x="676" y="253" width="306" height="98" fill="#070A12" rx="2" opacity="0.65"/>
+  <rect x="676" y="253" width="306" height="98" fill="none" stroke="#29334F" stroke-width="0.5" rx="2"/>
+
+  <!-- Circuit nodes (row 1) -->
+  <circle cx="698" cy="275" r="4" fill="#28D7FE" opacity="0.85"/>
+  <circle cx="738" cy="275" r="3" fill="#8B5CF6" opacity="0.75"/>
+  <circle cx="778" cy="275" r="4" fill="#28D7FE" opacity="0.85"/>
+  <circle cx="818" cy="275" r="3" fill="#6E8EFF" opacity="0.75"/>
+  <circle cx="858" cy="275" r="4" fill="#8B5CF6" opacity="0.85"/>
+  <circle cx="898" cy="275" r="3" fill="#28D7FE" opacity="0.75"/>
+  <circle cx="938" cy="275" r="4" fill="#6E8EFF" opacity="0.85"/>
+  <circle cx="975" cy="275" r="3" fill="#28D7FE" opacity="0.7"/>
+
+  <!-- Horizontal trace -->
+  <line x1="698" y1="275" x2="975" y2="275" stroke="#29334F" stroke-width="1.5"/>
+
+  <!-- Animated circuit pulse -->
+  <line x1="698" y1="275" x2="975" y2="275" stroke="#28D7FE" stroke-width="2"
+        stroke-dasharray="22 310">
+    <animate attributeName="stroke-dashoffset" from="332" to="-22" dur="4.5s"
+             repeatCount="indefinite"/>
+  </line>
+
+  <!-- Branch lines going down -->
+  <line x1="738" y1="275" x2="738" y2="335" stroke="#29334F" stroke-width="0.8" opacity="0.6"/>
+  <line x1="818" y1="275" x2="818" y2="325" stroke="#29334F" stroke-width="0.8" opacity="0.6"/>
+  <line x1="898" y1="275" x2="898" y2="340" stroke="#29334F" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Branch nodes -->
+  <circle cx="738" cy="315" r="3" fill="#8B5CF6" opacity="0.75"/>
+  <circle cx="818" cy="315" r="3" fill="#28D7FE" opacity="0.75"/>
+  <circle cx="898" cy="330" r="3" fill="#6E8EFF" opacity="0.75"/>
+
+  <!-- Branch cross-connections -->
+  <line x1="738" y1="315" x2="818" y2="315" stroke="#29334F" stroke-width="0.7" opacity="0.5"/>
+  <line x1="818" y1="315" x2="898" y2="330" stroke="#29334F" stroke-width="0.7" opacity="0.5"/>
+
+  <!-- Node labels -->
+  <text x="738" y="348" font-family="monospace,Courier New,Courier" font-size="6"
+        fill="#9AA7C7" text-anchor="middle">ML</text>
+  <text x="818" y="348" font-family="monospace,Courier New,Courier" font-size="6"
+        fill="#9AA7C7" text-anchor="middle">SYS</text>
+  <text x="898" y="348" font-family="monospace,Courier New,Courier" font-size="6"
+        fill="#9AA7C7" text-anchor="middle">OPS</text>
+
+  <!-- ── DOMAIN ACTIVITY (progress bars) ── -->
+  <text x="676" y="373" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#9AA7C7" letter-spacing="2">DOMAIN ACTIVITY</text>
+
+  <!-- SW SYSTEMS -->
+  <text x="676" y="389" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#9AA7C7">SW SYS</text>
+  <rect x="726" y="380" width="258" height="11" fill="#070A12" rx="1"/>
+  <rect x="726" y="380" width="258" height="11" fill="none" stroke="#29334F" stroke-width="0.5" rx="1"/>
+  <rect x="726" y="380" width="0"   height="11" fill="url(#prg)" rx="1">
+    <animate attributeName="width" values="0;218;218;0"
+             keyTimes="0;0.65;0.88;1" dur="9s" begin="0s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ML/MLOPS -->
+  <text x="676" y="407" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#9AA7C7">ML/MLOPS</text>
+  <rect x="726" y="398" width="258" height="11" fill="#070A12" rx="1"/>
+  <rect x="726" y="398" width="258" height="11" fill="none" stroke="#29334F" stroke-width="0.5" rx="1"/>
+  <rect x="726" y="398" width="0"   height="11" fill="url(#prg)" rx="1">
+    <animate attributeName="width" values="0;200;200;0"
+             keyTimes="0;0.65;0.88;1" dur="9s" begin="0.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- LINUX -->
+  <text x="676" y="425" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#9AA7C7">LINUX</text>
+  <rect x="726" y="416" width="258" height="11" fill="#070A12" rx="1"/>
+  <rect x="726" y="416" width="258" height="11" fill="none" stroke="#29334F" stroke-width="0.5" rx="1"/>
+  <rect x="726" y="416" width="0"   height="11" fill="url(#prg)" rx="1">
+    <animate attributeName="width" values="0;176;176;0"
+             keyTimes="0;0.65;0.88;1" dur="9s" begin="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- MARINE -->
+  <text x="676" y="443" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#9AA7C7">MARINE</text>
+  <rect x="726" y="434" width="258" height="11" fill="#070A12" rx="1"/>
+  <rect x="726" y="434" width="258" height="11" fill="none" stroke="#29334F" stroke-width="0.5" rx="1"/>
+  <rect x="726" y="434" width="0"   height="11" fill="url(#prg)" rx="1">
+    <animate attributeName="width" values="0;190;190;0"
+             keyTimes="0;0.65;0.88;1" dur="9s" begin="1.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- RT SYS -->
+  <text x="676" y="461" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#9AA7C7">RT SYS</text>
+  <rect x="726" y="452" width="258" height="11" fill="#070A12" rx="1"/>
+  <rect x="726" y="452" width="258" height="11" fill="none" stroke="#29334F" stroke-width="0.5" rx="1"/>
+  <rect x="726" y="452" width="0"   height="11" fill="url(#prg)" rx="1">
+    <animate attributeName="width" values="0;148;148;0"
+             keyTimes="0;0.65;0.88;1" dur="9s" begin="2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ── STATUS DOTS ─────────── -->
+  <text x="676" y="481" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#9AA7C7" letter-spacing="2">SYS STATUS</text>
+
+  <circle cx="685" cy="496" r="4.5" fill="#28D7FE" class="dp1"/>
+  <text x="696" y="500" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#9AA7C7">ONLINE</text>
+
+  <circle cx="748" cy="496" r="4.5" fill="#8B5CF6" class="dp2"/>
+  <text x="759" y="500" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#9AA7C7">BUILD</text>
+
+  <circle cx="808" cy="496" r="4.5" fill="#6E8EFF" class="dp3"/>
+  <text x="819" y="500" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#9AA7C7">SCAN</text>
+
+  <circle cx="864" cy="496" r="4.5" fill="#28D7FE" class="dp4"/>
+  <text x="875" y="500" font-family="monospace,Courier New,Courier" font-size="7"
+        fill="#9AA7C7">SYNC</text>
+
+  <!-- ═══════════════════════════════════════════════════════
+       OVERLAYS
+       ═══════════════════════════════════════════════════════ -->
+
+  <!-- Scanline sweep (translucent band moving top to bottom, clipped) -->
+  <rect x="9" y="-80" width="982" height="80" fill="url(#slg)" clip-path="url(#cc)">
+    <animateTransform attributeName="transform" type="translate"
+                      from="0,0" to="0,612" dur="7s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Glitch fragment 1 (brief horizontal shift near DIVYA M text) -->
+  <rect x="24" y="88" width="110" height="6" fill="#070A12" opacity="0">
+    <animate attributeName="opacity"
+             values="0;0;0;0;0;0;0;0;0;0.9;0;0.7;0;0;0;0;0;0;0;0"
+             dur="8.3s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="0;0;0;0;0;0;0;0;0;5,0;-3,0;2,0;0;0;0;0;0;0;0;0"
+                      dur="8.3s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="24" y="88" width="110" height="6" fill="#28D7FE" opacity="0">
+    <animate attributeName="opacity"
+             values="0;0;0;0;0;0;0;0;0;0.06;0;0.04;0;0;0;0;0;0;0;0"
+             dur="8.3s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="0;0;0;0;0;0;0;0;0;5,0;-3,0;2,0;0;0;0;0;0;0;0;0"
+                      dur="8.3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ── BOTTOM INFO BAR ───────── -->
+  <text x="22" y="508" font-family="monospace,Courier New,Courier" font-size="6"
+        fill="#29334F" letter-spacing="1">
+    DM-984 // MULTIDISCIPLINARY DEVELOPER // ARCHIVE NODE: ACTIVE // UPLINK: ONLINE
+  </text>
+  <text x="978" y="508" font-family="monospace,Courier New,Courier" font-size="6"
+        fill="#29334F" text-anchor="end">v2.4</text>
+</svg>

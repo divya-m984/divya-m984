@@ -24,7 +24,13 @@
 
 </div>
 
----
+<p align="center">
+  <img
+    src="./assets/animated-divider.svg"
+    alt=""
+    width="100%"
+  />
+</p>
 
 ## About
 
@@ -69,7 +75,21 @@ future_targets:
   - Production-ready technical projects
 ```
 
----
+<div align="center">
+  <img
+    src="./assets/dossier-panel.svg"
+    alt="Animated technical identity dossier for Divya M, multidisciplinary developer"
+    width="100%"
+  />
+</div>
+
+<p align="center">
+  <img
+    src="./assets/animated-divider.svg"
+    alt=""
+    width="100%"
+  />
+</p>
 
 ## Current Work
 
@@ -112,7 +132,13 @@ An MLOps-driven sonar framework for coral reef habitat prediction, marine ecosys
 
 **Vert Tiger Hyprland** — `Linux Systems · Desktop Customization · Shell and UI Engineering` — Customized Arch Linux environment with Hyprland tiling compositor and a complete dotfile configuration. `Arch Linux` `Hyprland` `Waybar` `Kitty` `Zsh` `CSS`
 
----
+<p align="center">
+  <img
+    src="./assets/animated-divider.svg"
+    alt=""
+    width="100%"
+  />
+</p>
 
 ## Technology Stack
 
@@ -227,6 +253,22 @@ I am interested in working on:
 - Research prototypes that need engineering implementation
 
 If you are working on something in these areas, reach out through GitHub.
+
+<p align="center">
+  <img
+    src="./assets/animated-divider.svg"
+    alt=""
+    width="100%"
+  />
+</p>
+
+<div align="center">
+  <img
+    src="./assets/system-status.svg"
+    alt="Animated system status showing active development and open-source focus"
+    width="760"
+  />
+</div>
 
 ---
 
