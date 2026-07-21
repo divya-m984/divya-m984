@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:28D7FE,50:8B5CF6,100:4F8CFF&height=220&section=header&text=Divya%20M&fontSize=72&fontColor=F4F7FF&animation=fadeIn&fontAlignY=44&desc=Engineering%20software%20across%20systems%2C%20intelligence%20and%20impact&descAlignY=64&descSize=17&descColor=A7B2CE" width="100%" alt="Divya M — Engineering software across systems, intelligence and impact"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:28D7FE,50:8B5CF6,100:4F8CFF&height=220&section=header&text=Divya%20M&fontSize=72&fontColor=F4F7FF&animation=fadeIn&fontAlignY=44&desc=Building%20across%20software%2C%20intelligent%20systems%2C%20infrastructure%20and%20impact&descAlignY=64&descSize=17&descColor=A7B2CE" width="100%" alt="Divya M — Building across software, intelligent systems, infrastructure and impact"/>
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=15&duration=2800&pause=900&color=28D7FE&center=true&vCenter=true&width=540&height=42&lines=Full-Stack+Developer;MLOps+and+Applied+ML+Explorer;Open-Source+Builder;Building+Real-Time+Systems;Exploring+Marine+Technology;Creating+Sustainability-Focused+Software;Arch+Linux+User;Preparing+for+GSoC+2027" alt="Full-Stack Developer · MLOps Explorer · Open-Source Builder · Marine Technology · GSoC 2027"/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=15&duration=2800&pause=900&color=28D7FE&center=true&vCenter=true&width=540&height=42&lines=Multidisciplinary+Developer;Software+and+Systems+Builder;MLOps+and+Applied+ML+Explorer;Open-Source+Builder;Full-Stack+Developer;Building+Real-Time+Systems;Exploring+Marine+and+Ocean+Technology;Creating+Sustainability-Focused+Solutions;Linux+and+Infrastructure+Enthusiast;Research-Oriented+Developer;Preparing+for+GSoC+2027" alt="Multidisciplinary Developer · Software and Systems Builder · MLOps Explorer · Open-Source Builder"/>
 
 <br/>
 
@@ -15,8 +15,6 @@
 <img src="https://img.shields.io/badge/Arch%20Linux-0D1528?style=flat-square&logo=archlinux&logoColor=4F8CFF" alt="Arch Linux"/>
 &nbsp;
 <img src="https://img.shields.io/badge/Currently%20Building-0D1528?style=flat-square&logo=github&logoColor=28D7FE" alt="Currently Building"/>
-&nbsp;
-<img src="https://img.shields.io/badge/JLPT%20N4%20Learner-0D1528?style=flat-square&logoColor=8B5CF6" alt="JLPT N4 Learner"/>
 
 <br/><br/>
 
@@ -28,11 +26,11 @@
 
 ## About
 
-I build across full-stack systems, machine learning infrastructure, developer tools and sustainability-focused applications. My work spans from real-time transport platforms and ESG management systems to MLOps pipelines and Linux workflow tooling.
+I build across software engineering, machine-learning infrastructure, real-time applications, Linux systems and impact-focused technology. My projects range from full-stack platforms and MLOps pipelines to marine monitoring systems, sustainability applications and customized computing environments.
 
-I am drawn to problems where software intersects with environmental systems, ocean science and human-scale impact. I enjoy taking ideas from rough prototypes to production-oriented systems, with attention to reproducibility, maintainability and honest engineering tradeoffs.
+I work through the full arc of a project — from initial research and architecture through prototype, implementation, testing and deployment. I am drawn to problems where technology connects to environmental systems, real-world infrastructure and meaningful outcomes.
 
-Currently building an MLOps framework for marine habitat monitoring and a Linux-first CLI tool for developer workflows.
+Currently building an MLOps framework for marine habitat monitoring, connecting sonar data pipelines to reef-health prediction and restoration decision support.
 
 ---
 
@@ -42,21 +40,31 @@ Currently building an MLOps framework for marine habitat monitoring and a Linux-
 name: Divya M
 username: divya-m984
 location: Chennai, India
-system: Arch Linux + Hyprland
-focus:
-  - Full-stack engineering
-  - MLOps and applied ML
-  - Open-source tools
-  - Real-time systems
-  - Sustainability technology
-  - Marine and ocean technology
-currently_learning:
+identity: Multidisciplinary Developer
+
+domains:
+  - Software Engineering
+  - Full-Stack Development
+  - Machine Learning
+  - MLOps
+  - Linux and Systems
+  - Open-Source Development
+  - Real-Time Systems
+  - Sustainability Technology
+  - Marine Technology
+  - Cybersecurity
+
+currently_exploring:
   - Production MLOps
-  - Scalable system design
-  - Japanese JLPT N4
-future_goals:
-  - Research opportunities in Japan
+  - Scalable System Design
+  - Research-Oriented Engineering
+  - Infrastructure and Automation
+
+future_targets:
   - Google Summer of Code 2027
+  - Meaningful open-source contributions
+  - Stronger systems engineering knowledge
+  - Production-ready technical projects
 ```
 
 ---
@@ -78,44 +86,29 @@ An MLOps-driven sonar framework for coral reef habitat prediction, marine ecosys
 
 ---
 
-### Welp
-
-A Linux-first command-line utility that interprets confusing terminal failures and provides understandable explanations with actionable fixes.
-
-**Core capabilities**
-
-- Parses and classifies terminal error output across common Linux tools
-- Generates plain-language explanations and actionable command suggestions
-- Designed for Linux-first workflows with shell integration
-- Distributed as an open-source CLI package
-
-**Stack** &nbsp;—&nbsp; `Python` `CLI development` `Linux` `Shell workflows` `Developer tooling`
-
----
-
 ## Featured Repositories
 
 <div align="center">
 
 <a href="https://github.com/divya-m984/EcoSphere-ESG-Odoo-Solution-Hackathon">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=divya-m984&repo=EcoSphere-ESG-Odoo-Solution-Hackathon&hide_border=true&bg_color=0D1528&title_color=28D7FE&text_color=A7B2CE&icon_color=8B5CF6" alt="EcoSphere — ESG Management and Employee Gamification Platform"/>
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=divya-m984&repo=EcoSphere-ESG-Odoo-Solution-Hackathon&hide_border=true&bg_color=0D1528&title_color=28D7FE&text_color=A7B2CE&icon_color=8B5CF6" alt="EcoSphere — Sustainability Technology · Full-Stack Engineering · Gamification"/>
 </a>
 
 <a href="https://github.com/divya-m984/Real-Time-Public-Transport-Tracking-for-Small-Cities">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=divya-m984&repo=Real-Time-Public-Transport-Tracking-for-Small-Cities&hide_border=true&bg_color=0D1528&title_color=28D7FE&text_color=A7B2CE&icon_color=8B5CF6" alt="Real-Time Public Transport Tracker — live vehicle positions and route visualization"/>
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=divya-m984&repo=Real-Time-Public-Transport-Tracking-for-Small-Cities&hide_border=true&bg_color=0D1528&title_color=28D7FE&text_color=A7B2CE&icon_color=8B5CF6" alt="Real-Time Public Transport Tracker — Real-Time Systems · Geospatial Interfaces · Backend Communication"/>
 </a>
 
 <a href="https://github.com/divya-m984/Vert-tiger-hyprland">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=divya-m984&repo=Vert-tiger-hyprland&hide_border=true&bg_color=0D1528&title_color=28D7FE&text_color=A7B2CE&icon_color=8B5CF6" alt="Vert Tiger Hyprland — Arch Linux desktop environment configuration"/>
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=divya-m984&repo=Vert-tiger-hyprland&hide_border=true&bg_color=0D1528&title_color=28D7FE&text_color=A7B2CE&icon_color=8B5CF6" alt="Vert Tiger Hyprland — Linux Systems · Desktop Customization · Shell and UI Engineering"/>
 </a>
 
 </div>
 
-**EcoSphere** — Full-stack ESG management platform with employee gamification built on a React and NestJS architecture. `React` `TypeScript` `Material UI` `NestJS` `PostgreSQL` `Prisma`
+**EcoSphere** — `Sustainability Technology · Full-Stack Engineering · Gamification` — ESG management platform with employee gamification built on a React and NestJS architecture. `React` `TypeScript` `Material UI` `NestJS` `PostgreSQL` `Prisma`
 
-**Real-Time Public Transport Tracker** — Live vehicle positions, route visualization and estimated arrivals for small-city transit networks. `JavaScript` `Node.js` `Express` `Socket.IO` `Leaflet`
+**Real-Time Public Transport Tracker** — `Real-Time Systems · Geospatial Interfaces · Backend Communication` — Live vehicle positions, route visualization and estimated arrivals for small-city transit networks. `JavaScript` `Node.js` `Express` `Socket.IO` `Leaflet`
 
-**Vert Tiger Hyprland** — Customized Arch Linux environment with Hyprland tiling compositor and a complete dotfile configuration. `Arch Linux` `Hyprland` `Waybar` `Kitty` `Zsh` `CSS`
+**Vert Tiger Hyprland** — `Linux Systems · Desktop Customization · Shell and UI Engineering` — Customized Arch Linux environment with Hyprland tiling compositor and a complete dotfile configuration. `Arch Linux` `Hyprland` `Waybar` `Kitty` `Zsh` `CSS`
 
 ---
 
@@ -123,17 +116,13 @@ A Linux-first command-line utility that interprets confusing terminal failures a
 
 <div align="center">
 
-**Languages**
+**Programming**
 
 <img src="https://skillicons.dev/icons?i=python,ts,js,html,css,bash&theme=dark" alt="Python, TypeScript, JavaScript, HTML, CSS, Bash"/>
 
-**Frontend**
+**Application Engineering**
 
-<img src="https://skillicons.dev/icons?i=react,vite,materialui&theme=dark" alt="React, Vite, Material UI"/>
-
-**Backend**
-
-<img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,fastapi&theme=dark" alt="Node.js, Express, NestJS, FastAPI"/>
+<img src="https://skillicons.dev/icons?i=react,vite,materialui,nodejs,express,nestjs,fastapi&theme=dark" alt="React, Vite, Material UI, Node.js, Express, NestJS, FastAPI"/>
 
 **Machine Learning and MLOps**
 
@@ -147,15 +136,27 @@ A Linux-first command-line utility that interprets confusing terminal failures a
 &nbsp;
 <img src="https://img.shields.io/badge/Streamlit-0D1528?style=flat-square&logo=streamlit&logoColor=8B5CF6" alt="Streamlit"/>
 
-**Databases**
+**Data**
 
 <img src="https://skillicons.dev/icons?i=postgres,mongodb&theme=dark" alt="PostgreSQL, MongoDB"/>
 &nbsp;
 <img src="https://img.shields.io/badge/Prisma-0D1528?style=flat-square&logo=prisma&logoColor=28D7FE" alt="Prisma"/>
 
-**DevOps and Tooling**
+**Infrastructure and Automation**
 
-<img src="https://skillicons.dev/icons?i=docker,githubactions,git,github,linux,arch&theme=dark" alt="Docker, GitHub Actions, Git, GitHub, Linux, Arch Linux"/>
+<img src="https://skillicons.dev/icons?i=docker,githubactions,git,github&theme=dark" alt="Docker, GitHub Actions, Git, GitHub"/>
+
+**Linux and Systems**
+
+<img src="https://skillicons.dev/icons?i=linux,arch&theme=dark" alt="Linux, Arch Linux"/>
+&nbsp;
+<img src="https://img.shields.io/badge/Hyprland-0D1528?style=flat-square&logoColor=28D7FE" alt="Hyprland"/>
+&nbsp;
+<img src="https://img.shields.io/badge/Zsh-0D1528?style=flat-square&logoColor=8B5CF6" alt="Zsh"/>
+&nbsp;
+<img src="https://img.shields.io/badge/Kitty-0D1528?style=flat-square&logoColor=4F8CFF" alt="Kitty"/>
+&nbsp;
+<img src="https://img.shields.io/badge/Waybar-0D1528?style=flat-square&logoColor=28D7FE" alt="Waybar"/>
 
 </div>
 
@@ -191,23 +192,25 @@ A Linux-first command-line utility that interprets confusing terminal failures a
 
 | | |
 |:--|:--|
-| MLOps and ML infrastructure | Developer tools and CLI |
-| Open-source software | Real-time systems |
-| Sustainability technology | Marine and ocean systems |
-| Linux environments | Machine-learning infrastructure |
-| Cybersecurity | Human-centered interfaces |
+| Software architecture | Machine-learning infrastructure |
+| Open-source software | Real-time and distributed systems |
+| Linux environments | Sustainability technology |
+| Marine monitoring systems | Cybersecurity |
+| Human-centered interfaces | Research prototypes |
+| Automation and deployment | Hardware-software experimentation |
 
 ---
 
 ## Current Goals
 
-- [x] Completed JLPT N5
-- [ ] Currently studying for JLPT N4
-- [ ] Preparing for research opportunities in Japan
-- [ ] Planning Google Summer of Code 2027 application
-- [ ] Building production-oriented MLOps projects with rigorous evaluation pipelines
-- [ ] Increasing open-source contribution cadence
-- [ ] Developing technology connected to sustainability and ocean conservation
+- [ ] Preparing to apply for Google Summer of Code 2027
+- [ ] Contributing more consistently to open-source software
+- [ ] Building production-oriented MLOps systems
+- [ ] Exploring marine and sustainability technology deeper
+- [ ] Developing stronger systems and infrastructure knowledge
+- [ ] Creating tools that solve practical problems
+- [ ] Improving software architecture and deployment skills
+- [ ] Turning research ideas into working prototypes
 
 ---
 
@@ -215,9 +218,10 @@ A Linux-first command-line utility that interprets confusing terminal failures a
 
 I am interested in working on:
 
-- Open-source projects in MLOps, developer tooling and Linux ecosystems
+- Open-source projects across software engineering, MLOps and Linux ecosystems
 - Sustainability technology and marine science applications
 - Real-time data systems with meaningful pipelines
+- Cybersecurity tools and security research
 - Research prototypes that need engineering implementation
 
 If you are working on something in these areas, reach out through GitHub.
