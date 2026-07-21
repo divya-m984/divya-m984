@@ -40,41 +40,6 @@ I work through the full arc of a project — from initial research and architect
 
 Currently building an MLOps framework for marine habitat monitoring, connecting sonar data pipelines to reef-health prediction and restoration decision support.
 
----
-
-## Profile
-
-```yaml
-name: Divya M
-username: divya-m984
-location: Chennai, India
-identity: Multidisciplinary Developer
-
-domains:
-  - Software Engineering
-  - Full-Stack Development
-  - Machine Learning
-  - MLOps
-  - Linux and Systems
-  - Open-Source Development
-  - Real-Time Systems
-  - Sustainability Technology
-  - Marine Technology
-  - Cybersecurity
-
-currently_exploring:
-  - Production MLOps
-  - Scalable System Design
-  - Research-Oriented Engineering
-  - Infrastructure and Automation
-
-future_targets:
-  - Google Summer of Code 2027
-  - Meaningful open-source contributions
-  - Stronger systems engineering knowledge
-  - Production-ready technical projects
-```
-
 <div align="center">
   <img
     src="./assets/dossier-panel.svg"

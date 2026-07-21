@@ -1,60 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="1000" height="420"
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1000 420" width="1000" height="420"
      role="img" aria-label="Profile card for Divya M, multidisciplinary developer">
   <defs>
-    <!-- Ambient glow behind globe -->
-    <radialGradient id="gg" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"   stop-color="#8B5CF6" stop-opacity="0.22"/>
-      <stop offset="55%"  stop-color="#28D7FE" stop-opacity="0.06"/>
+    <!-- CRT / screen-door dot grid: 1px dot every 4px, fixed in user space -->
+    <pattern id="crt" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect x="1.5" y="1.5" width="1" height="1" fill="#000" opacity="0.22"/>
+    </pattern>
+    <!-- Very mild upper-left highlight (NOT glossy — just a faint bright zone) -->
+    <radialGradient id="mhl" gradientUnits="userSpaceOnUse" cx="696" cy="158" r="140">
+      <stop offset="0%"   stop-color="#EAF2FF" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#EAF2FF" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Limb darkening: edge vignette only, no terminator sweep -->
+    <radialGradient id="mlimb" gradientUnits="userSpaceOnUse" cx="740" cy="210" r="145">
+      <stop offset="68%"  stop-color="#000" stop-opacity="0"/>
+      <stop offset="86%"  stop-color="#000" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.54"/>
+    </radialGradient>
+    <!-- Atmospheric bloom glow behind moon -->
+    <radialGradient id="gg" gradientUnits="userSpaceOnUse" cx="740" cy="210" r="178">
+      <stop offset="0%"   stop-color="#5B9ADF" stop-opacity="0.18"/>
+      <stop offset="55%"  stop-color="#28D7FE" stop-opacity="0.05"/>
       <stop offset="100%" stop-color="#28D7FE" stop-opacity="0"/>
     </radialGradient>
-    <!-- Subtle background tint on globe side -->
+    <!-- Panel background tint -->
     <radialGradient id="bg" cx="75%" cy="50%" r="45%">
-      <stop offset="0%"   stop-color="#8B5CF6" stop-opacity="0.07"/>
+      <stop offset="0%"   stop-color="#8B5CF6" stop-opacity="0.06"/>
       <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
     </radialGradient>
+    <!-- Fixed circular clip — moon silhouette never moves -->
+    <clipPath id="mc">
+      <circle cx="740" cy="210" r="145"/>
+    </clipPath>
     <style>
-      @keyframes gp { 0%,100%{opacity:0.55} 50%{opacity:1} }
-      @keyframes gr { 0%,100%{opacity:0.18} 50%{opacity:0.38} }
-      .glow  { animation: gp 6s ease-in-out infinite; }
-      .gring { animation: gr 6s ease-in-out 1s infinite; }
+      @keyframes gp { 0%,100%{opacity:0.48} 50%{opacity:0.96} }
+      .mg { animation: gp 7s ease-in-out infinite; }
     </style>
   </defs>
 
-  <!-- Background -->
+  <!-- Panel -->
   <rect width="1000" height="420" fill="#070A12" rx="6"/>
   <rect x="1" y="1" width="998" height="418" fill="#0A0F1E" rx="5"/>
-  <!-- Background tint (globe side) -->
   <rect x="1" y="1" width="998" height="418" fill="url(#bg)" rx="5"/>
-  <!-- Border -->
   <rect x="1" y="1" width="998" height="418" fill="none" stroke="#28D7FE" stroke-width="0.7" rx="5" opacity="0.25"/>
   <!-- Corner brackets -->
-  <path d="M2,2 L30,2 M2,2 L2,30"     fill="none" stroke="#28D7FE" stroke-width="1.5"/>
-  <path d="M998,2 L970,2 M998,2 L998,30"   fill="none" stroke="#28D7FE" stroke-width="1.5"/>
-  <path d="M2,418 L30,418 M2,418 L2,390"   fill="none" stroke="#28D7FE" stroke-width="1.5"/>
+  <path d="M2,2 L30,2 M2,2 L2,30"             fill="none" stroke="#28D7FE" stroke-width="1.5"/>
+  <path d="M998,2 L970,2 M998,2 L998,30"       fill="none" stroke="#28D7FE" stroke-width="1.5"/>
+  <path d="M2,418 L30,418 M2,418 L2,390"       fill="none" stroke="#28D7FE" stroke-width="1.5"/>
   <path d="M998,418 L970,418 M998,418 L998,390" fill="none" stroke="#28D7FE" stroke-width="1.5"/>
-
   <!-- Column divider -->
   <line x1="478" y1="32" x2="478" y2="388" stroke="#1A2440" stroke-width="1"/>
 
-  <!-- ════════════════════════════════════════════
-       LEFT COLUMN
-       ════════════════════════════════════════════ -->
-
-  <!-- NAME -->
-  <text x="44" y="68"
-        font-family="monospace,Courier New,Courier" font-size="9"
-        fill="#8B5CF6" letter-spacing="3">NAME</text>
-  <text x="44" y="100"
-        font-family="sans-serif,Arial,Helvetica" font-size="27"
-        fill="#F4F7FF" font-weight="300" letter-spacing="2">Divya M</text>
-
+  <!-- ════ LEFT COLUMN (unchanged) ════ -->
+  <text x="44" y="68"  font-family="monospace,Courier New,Courier" font-size="9"  fill="#8B5CF6" letter-spacing="3">NAME</text>
+  <text x="44" y="100" font-family="sans-serif,Arial,Helvetica"    font-size="27" fill="#F4F7FF" font-weight="300" letter-spacing="2">Divya M</text>
   <line x1="44" y1="115" x2="455" y2="115" stroke="#1A2440" stroke-width="1"/>
-
-  <!-- INTERESTS -->
-  <text x="44" y="138"
-        font-family="monospace,Courier New,Courier" font-size="9"
-        fill="#8B5CF6" letter-spacing="3">INTERESTS</text>
-
+  <text x="44" y="138" font-family="monospace,Courier New,Courier" font-size="9"  fill="#8B5CF6" letter-spacing="3">INTERESTS</text>
   <text x="44" y="160" font-family="sans-serif,Arial,Helvetica" font-size="12.5" fill="#9AA7C7">&#x2014; Software Engineering</text>
   <text x="44" y="178" font-family="sans-serif,Arial,Helvetica" font-size="12.5" fill="#9AA7C7">&#x2014; Machine Learning &amp; MLOps</text>
   <text x="44" y="196" font-family="sans-serif,Arial,Helvetica" font-size="12.5" fill="#9AA7C7">&#x2014; Linux Systems</text>
@@ -63,83 +64,280 @@
   <text x="44" y="250" font-family="sans-serif,Arial,Helvetica" font-size="12.5" fill="#9AA7C7">&#x2014; Marine Technology</text>
   <text x="44" y="268" font-family="sans-serif,Arial,Helvetica" font-size="12.5" fill="#9AA7C7">&#x2014; Cybersecurity</text>
   <text x="44" y="286" font-family="sans-serif,Arial,Helvetica" font-size="12.5" fill="#9AA7C7">&#x2014; Open Source</text>
-
   <line x1="44" y1="301" x2="455" y2="301" stroke="#1A2440" stroke-width="1"/>
-
-  <!-- SKILLS -->
-  <text x="44" y="323"
-        font-family="monospace,Courier New,Courier" font-size="9"
-        fill="#8B5CF6" letter-spacing="3">SKILLS</text>
-
+  <text x="44" y="323" font-family="monospace,Courier New,Courier" font-size="9"    fill="#8B5CF6" letter-spacing="3">SKILLS</text>
   <text x="44" y="344" font-family="monospace,Courier New,Courier" font-size="10.5" fill="#6E8EFF">Python · TypeScript · JavaScript</text>
   <text x="44" y="363" font-family="monospace,Courier New,Courier" font-size="10.5" fill="#6E8EFF">React · FastAPI · Node.js</text>
   <text x="44" y="382" font-family="monospace,Courier New,Courier" font-size="10.5" fill="#6E8EFF">Docker · PostgreSQL · GitHub Actions</text>
   <text x="44" y="401" font-family="monospace,Courier New,Courier" font-size="10.5" fill="#6E8EFF">Arch Linux · Scikit-learn · MLflow</text>
 
-  <!-- ════════════════════════════════════════════
-       RIGHT COLUMN — GLOBE
-       Globe center: (740, 210)  R = 148
-       ════════════════════════════════════════════ -->
+  <!-- ════ RIGHT COLUMN — PIXELATED MOON ════ -->
 
-  <!-- Ambient glow -->
-  <circle cx="740" cy="210" r="158" fill="url(#gg)" class="glow"/>
+  <!--
+    Tiny pixel stars — sparse, square, restrained.
+    Deliberately far from the moon body to read as space background.
+  -->
+  <rect x="530" y="52"  width="2" height="2" fill="#D9E8FF" opacity="0.70"/>
+  <rect x="558" y="90"  width="1" height="1" fill="#EAF2FF" opacity="0.60"/>
+  <rect x="916" y="44"  width="2" height="2" fill="#D9E8FF" opacity="0.65"/>
+  <rect x="966" y="78"  width="1" height="1" fill="#EAF2FF" opacity="0.55"/>
+  <rect x="512" y="138" width="1" height="1" fill="#D9E8FF" opacity="0.50"/>
+  <rect x="942" y="150" width="2" height="2" fill="#EAF2FF" opacity="0.58"/>
+  <rect x="536" y="296" width="1" height="1" fill="#D9E8FF" opacity="0.50"/>
+  <rect x="970" y="312" width="2" height="2" fill="#EAF2FF" opacity="0.48"/>
+  <rect x="522" y="360" width="1" height="1" fill="#D9E8FF" opacity="0.45"/>
+  <rect x="956" y="374" width="1" height="1" fill="#EAF2FF" opacity="0.46"/>
+  <rect x="900" y="396" width="2" height="2" fill="#D9E8FF" opacity="0.40"/>
+  <rect x="548" y="372" width="1" height="1" fill="#EAF2FF" opacity="0.44"/>
+  <rect x="988" y="180" width="1" height="1" fill="#D9E8FF" opacity="0.46"/>
+  <rect x="502" y="242" width="2" height="2" fill="#D9E8FF" opacity="0.40"/>
 
-  <!-- Outer haze ring -->
-  <circle cx="740" cy="210" r="153" fill="none" stroke="#28D7FE" stroke-width="1.5"
-          opacity="0.06" class="gring"/>
-  <circle cx="740" cy="210" r="150" fill="none" stroke="#28D7FE" stroke-width="0.5"
-          opacity="0.12" class="gring"/>
+  <!-- Atmospheric bloom glow (fixed, behind moon) -->
+  <circle cx="740" cy="210" r="172" fill="url(#gg)" class="mg"/>
 
-  <!-- Static latitude lines (orthographic, ~15° elevation) -->
-  <!-- Equator -->
-  <ellipse cx="740" cy="210" rx="148" ry="38"
-           fill="none" stroke="#29334F" stroke-width="0.9" opacity="0.8"/>
-  <!-- 30°N / 30°S -->
-  <ellipse cx="740" cy="139" rx="128" ry="33"
-           fill="none" stroke="#29334F" stroke-width="0.65" opacity="0.6"/>
-  <ellipse cx="740" cy="281" rx="128" ry="33"
-           fill="none" stroke="#29334F" stroke-width="0.65" opacity="0.6"/>
-  <!-- 60°N / 60°S -->
-  <ellipse cx="740" cy="86"  rx="74"  ry="19"
-           fill="none" stroke="#29334F" stroke-width="0.5" opacity="0.42"/>
-  <ellipse cx="740" cy="334" rx="74"  ry="19"
-           fill="none" stroke="#29334F" stroke-width="0.5" opacity="0.42"/>
+  <!-- Moon base circle: flat icy-blue, no gloss -->
+  <circle cx="740" cy="210" r="145" fill="#B8CCEC"/>
 
-  <!-- Globe border circle -->
-  <circle cx="740" cy="210" r="148" fill="none" stroke="#28D7FE" stroke-width="1.1" opacity="0.58"/>
+  <!--
+    ══════════════════════════════════════════════════
+    ANIMATED LUNAR SURFACE
+    ──────────────────────────────────────────────────
+    Architecture:
+    · Outer <g> has the circular clip-path (mc). Silhouette is fixed.
+    · Inner <g> scrolls horizontally via animateTransform translate.
+    · Two identical tiles, each 360px wide, placed side by side.
+      Tile 1: base x origin = 595  (moon left edge)
+      Tile 2: base x origin = 955  (595 + 360)
+    · Animation: translate 0,0 → -360,0 over 18s, linear, infinite.
+      Speed ≈ 20 px/s. Features cross the visible face (~290px) in ~14s.
+      Motion clearly visible within 2–3 seconds.
+    · Seamless because Tile 2 = Tile 1 with every x coordinate + 360.
+    ══════════════════════════════════════════════════
+  -->
+  <g clip-path="url(#mc)">
+    <g>
 
-  <!-- Animated longitude meridians — three ellipses phase-shifted 3s apart (dur=9s)
-       Each sweeps rx: 0 → 148 → 0 simulating a meridian rotating around the globe.
-       Phase offsets create 3 meridians always at different apparent widths.
-       Initial rx attributes are best-guess static values for no-animation fallback. -->
+      <!-- ═══════════════════════════════
+           TILE 1   base-x = 595
+           ═══════════════════════════════ -->
 
-  <!-- Meridian 1: starts from edge-on, sweeps to face-on -->
-  <ellipse cx="740" cy="210" rx="2" ry="148"
-           fill="none" stroke="#28D7FE" stroke-width="1" opacity="0.62">
-    <animate attributeName="rx"
-             values="2;148;2" keyTimes="0;0.5;1"
-             calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
-             dur="9s" begin="0s" repeatCount="indefinite"/>
-  </ellipse>
+      <!-- Flat surface base -->
+      <rect x="595" y="65" width="360" height="290" fill="#B8CCEC"/>
 
-  <!-- Meridian 2: 3s ahead in the cycle -->
-  <ellipse cx="740" cy="210" rx="100" ry="148"
-           fill="none" stroke="#6E8EFF" stroke-width="0.85" opacity="0.44">
-    <animate attributeName="rx"
-             values="2;148;2" keyTimes="0;0.5;1"
-             calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
-             dur="9s" begin="-3s" repeatCount="indefinite"/>
-  </ellipse>
+      <!-- ── MARIA: blocky rectangular dark patches ── -->
 
-  <!-- Meridian 3: 6s ahead in the cycle -->
-  <ellipse cx="740" cy="210" rx="100" ry="148"
-           fill="none" stroke="#8B5CF6" stroke-width="0.7" opacity="0.32">
-    <animate attributeName="rx"
-             values="2;148;2" keyTimes="0;0.5;1"
-             calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
-             dur="9s" begin="-6s" repeatCount="indefinite"/>
-  </ellipse>
+      <!-- Oceanus Procellarum: tall left strip -->
+      <rect x="596" y="150" width="64"  height="152" fill="#24314E" opacity="0.88"/>
+      <rect x="604" y="160" width="48"  height="134" fill="#1E2940" opacity="0.78"/>
 
-  <!-- Globe centre dot -->
-  <circle cx="740" cy="210" r="2.5" fill="#28D7FE" opacity="0.45"/>
+      <!-- Mare Imbrium: large upper-left block -->
+      <rect x="632" y="126" width="92"  height="72"  fill="#24314E" opacity="0.86"/>
+      <rect x="640" y="134" width="76"  height="56"  fill="#1E2940" opacity="0.76"/>
+
+      <!-- Sinus Iridum: bay notch at top of Imbrium -->
+      <rect x="638" y="114" width="50"  height="24"  fill="#2A3858" opacity="0.70"/>
+      <rect x="644" y="118" width="36"  height="16"  fill="#24314E" opacity="0.64"/>
+
+      <!-- Mare Frigoris: long horizontal strip near top -->
+      <rect x="630" y="74"  width="230" height="28"  fill="#2A3858" opacity="0.64"/>
+      <rect x="638" y="80"  width="214" height="16"  fill="#24314E" opacity="0.57"/>
+
+      <!-- Mare Serenitatis: upper-right block -->
+      <rect x="756" y="126" width="88"  height="72"  fill="#24314E" opacity="0.84"/>
+      <rect x="764" y="134" width="72"  height="56"  fill="#1E2940" opacity="0.74"/>
+
+      <!-- Mare Vaporum: small center block -->
+      <rect x="716" y="182" width="54"  height="44"  fill="#2A3858" opacity="0.72"/>
+      <rect x="724" y="190" width="38"  height="28"  fill="#24314E" opacity="0.66"/>
+
+      <!-- Mare Tranquillitatis: center-right block -->
+      <rect x="780" y="190" width="86"  height="68"  fill="#24314E" opacity="0.82"/>
+      <rect x="788" y="198" width="70"  height="52"  fill="#1E2940" opacity="0.72"/>
+
+      <!-- Mare Crisium: compact right block -->
+      <rect x="840" y="156" width="44"  height="36"  fill="#24314E" opacity="0.88"/>
+      <rect x="848" y="164" width="28"  height="20"  fill="#1C2738" opacity="0.84"/>
+
+      <!-- Mare Nubium: lower-center block -->
+      <rect x="656" y="260" width="104" height="68"  fill="#24314E" opacity="0.82"/>
+      <rect x="664" y="268" width="88"  height="52"  fill="#1E2940" opacity="0.72"/>
+
+      <!-- Mare Humorum: lower-left block -->
+      <rect x="598" y="266" width="56"  height="54"  fill="#2A3858" opacity="0.76"/>
+      <rect x="606" y="274" width="40"  height="38"  fill="#24314E" opacity="0.68"/>
+
+      <!-- Mare Smythii: far-right edge sliver -->
+      <rect x="868" y="200" width="24"  height="22"  fill="#24314E" opacity="0.82"/>
+
+      <!-- ── PIXEL CRATERS / SURFACE DETAIL ──
+           Blocky squares, not smooth ellipses with stroke rings.
+           Each crater = 1–2 small rects: dark floor, optional bright rim px.
+      -->
+
+      <!-- Plato: flat dark floor, no fancy ring -->
+      <rect x="646" y="136" width="22"  height="16"  fill="#141E2E" opacity="0.94"/>
+      <rect x="650" y="140" width="14"  height="8"   fill="#0C1422" opacity="0.90"/>
+
+      <!-- Tycho: dark, with tiny bright ejecta pixel -->
+      <rect x="702" y="264" width="16"  height="14"  fill="#141E2E" opacity="0.92"/>
+      <rect x="706" y="268" width="8"   height="6"   fill="#0C1422" opacity="0.86"/>
+      <rect x="700" y="262" width="4"   height="2"   fill="#D9E8FF" opacity="0.50"/>
+
+      <!-- Copernicus -->
+      <rect x="652" y="224" width="14"  height="12"  fill="#141E2E" opacity="0.88"/>
+      <rect x="654" y="226" width="6"   height="2"   fill="#D9E8FF" opacity="0.42"/>
+
+      <!-- Aristarchus: highly reflective bright pixel cluster -->
+      <rect x="604" y="164" width="12"  height="10"  fill="#EAF2FF" opacity="0.85"/>
+      <rect x="606" y="166" width="8"   height="6"   fill="#FAFCFF" opacity="0.65"/>
+
+      <!-- Grimaldi: very dark, no rim -->
+      <rect x="596" y="216" width="14"  height="12"  fill="#0C1422" opacity="0.96"/>
+
+      <!-- Kepler -->
+      <rect x="640" y="210" width="10"  height="8"   fill="#141E2E" opacity="0.84"/>
+
+      <!-- Clavius: large dark complex -->
+      <rect x="612" y="282" width="20"  height="16"  fill="#141E2E" opacity="0.90"/>
+      <rect x="616" y="286" width="12"  height="8"   fill="#0C1422" opacity="0.84"/>
+
+      <!-- Scattered medium pixel craters -->
+      <rect x="782" y="116" width="12"  height="8"   fill="#1C2738" opacity="0.78"/>
+      <rect x="828" y="152" width="10"  height="8"   fill="#1C2738" opacity="0.74"/>
+      <rect x="832" y="230" width="12"  height="8"   fill="#1C2738" opacity="0.76"/>
+      <rect x="744" y="304" width="12"  height="8"   fill="#1C2738" opacity="0.74"/>
+      <rect x="688" y="312" width="10"  height="8"   fill="#1C2738" opacity="0.72"/>
+      <rect x="760" y="244" width="10"  height="6"   fill="#1C2738" opacity="0.72"/>
+      <rect x="808" y="184" width="10"  height="6"   fill="#1C2738" opacity="0.70"/>
+      <rect x="696" y="116" width="10"  height="6"   fill="#1C2738" opacity="0.70"/>
+      <rect x="858" y="208" width="10"  height="6"   fill="#1C2738" opacity="0.70"/>
+
+      <!-- Small pixel craters -->
+      <rect x="852" y="242" width="8"   height="4"   fill="#1C2738" opacity="0.66"/>
+      <rect x="662" y="88"  width="8"   height="6"   fill="#1C2738" opacity="0.64"/>
+      <rect x="864" y="124" width="6"   height="4"   fill="#1C2738" opacity="0.62"/>
+      <rect x="728" y="140" width="8"   height="4"   fill="#1C2738" opacity="0.66"/>
+      <rect x="818" y="242" width="8"   height="4"   fill="#1C2738" opacity="0.64"/>
+      <rect x="670" y="242" width="8"   height="4"   fill="#1C2738" opacity="0.64"/>
+      <rect x="742" y="318" width="6"   height="4"   fill="#1C2738" opacity="0.62"/>
+      <rect x="810" y="118" width="6"   height="4"   fill="#1C2738" opacity="0.62"/>
+      <rect x="596" y="142" width="6"   height="4"   fill="#1C2738" opacity="0.60"/>
+      <rect x="876" y="172" width="6"   height="4"   fill="#1C2738" opacity="0.60"/>
+
+      <!-- Bright ejecta / highland highlights -->
+      <rect x="606" y="168" width="16"  height="4"   fill="#EAF2FF" opacity="0.44"/>
+      <rect x="702" y="268" width="12"  height="2"   fill="#D9E8FF" opacity="0.40"/>
+      <rect x="848" y="160" width="10"  height="2"   fill="#D9E8FF" opacity="0.52"/>
+      <rect x="652" y="228" width="8"   height="2"   fill="#D9E8FF" opacity="0.38"/>
+      <rect x="784" y="120" width="6"   height="2"   fill="#D9E8FF" opacity="0.36"/>
+
+      <!-- Highland midtone texture patches (subtle, break up uniform brightness) -->
+      <rect x="710" y="104" width="40"  height="20"  fill="#5D6F96" opacity="0.14"/>
+      <rect x="786" y="296" width="48"  height="22"  fill="#5D6F96" opacity="0.12"/>
+      <rect x="870" y="236" width="16"  height="28"  fill="#5D6F96" opacity="0.14"/>
+      <rect x="620" y="338" width="60"  height="18"  fill="#5D6F96" opacity="0.12"/>
+      <rect x="750" y="84"  width="32"  height="16"  fill="#AFC6EC" opacity="0.18"/>
+
+
+      <!-- ═══════════════════════════════
+           TILE 2   base-x = 955  (= 595 + 360)
+           Every x coordinate is Tile 1 x + 360
+           ═══════════════════════════════ -->
+
+      <!-- Flat surface base -->
+      <rect x="955" y="65" width="360" height="290" fill="#B8CCEC"/>
+
+      <!-- MARIA tile 2 -->
+      <rect x="956" y="150" width="64"  height="152" fill="#24314E" opacity="0.88"/>
+      <rect x="964" y="160" width="48"  height="134" fill="#1E2940" opacity="0.78"/>
+      <rect x="992" y="126" width="92"  height="72"  fill="#24314E" opacity="0.86"/>
+      <rect x="1000" y="134" width="76" height="56"  fill="#1E2940" opacity="0.76"/>
+      <rect x="998"  y="114" width="50" height="24"  fill="#2A3858" opacity="0.70"/>
+      <rect x="1004" y="118" width="36" height="16"  fill="#24314E" opacity="0.64"/>
+      <rect x="990"  y="74"  width="230" height="28" fill="#2A3858" opacity="0.64"/>
+      <rect x="998"  y="80"  width="214" height="16" fill="#24314E" opacity="0.57"/>
+      <rect x="1116" y="126" width="88" height="72"  fill="#24314E" opacity="0.84"/>
+      <rect x="1124" y="134" width="72" height="56"  fill="#1E2940" opacity="0.74"/>
+      <rect x="1076" y="182" width="54" height="44"  fill="#2A3858" opacity="0.72"/>
+      <rect x="1084" y="190" width="38" height="28"  fill="#24314E" opacity="0.66"/>
+      <rect x="1140" y="190" width="86" height="68"  fill="#24314E" opacity="0.82"/>
+      <rect x="1148" y="198" width="70" height="52"  fill="#1E2940" opacity="0.72"/>
+      <rect x="1200" y="156" width="44" height="36"  fill="#24314E" opacity="0.88"/>
+      <rect x="1208" y="164" width="28" height="20"  fill="#1C2738" opacity="0.84"/>
+      <rect x="1016" y="260" width="104" height="68" fill="#24314E" opacity="0.82"/>
+      <rect x="1024" y="268" width="88" height="52"  fill="#1E2940" opacity="0.72"/>
+      <rect x="958"  y="266" width="56" height="54"  fill="#2A3858" opacity="0.76"/>
+      <rect x="966"  y="274" width="40" height="38"  fill="#24314E" opacity="0.68"/>
+      <rect x="1228" y="200" width="24" height="22"  fill="#24314E" opacity="0.82"/>
+
+      <!-- Craters tile 2 -->
+      <rect x="1006" y="136" width="22" height="16"  fill="#141E2E" opacity="0.94"/>
+      <rect x="1010" y="140" width="14" height="8"   fill="#0C1422" opacity="0.90"/>
+      <rect x="1062" y="264" width="16" height="14"  fill="#141E2E" opacity="0.92"/>
+      <rect x="1066" y="268" width="8"  height="6"   fill="#0C1422" opacity="0.86"/>
+      <rect x="1060" y="262" width="4"  height="2"   fill="#D9E8FF" opacity="0.50"/>
+      <rect x="1012" y="224" width="14" height="12"  fill="#141E2E" opacity="0.88"/>
+      <rect x="1014" y="226" width="6"  height="2"   fill="#D9E8FF" opacity="0.42"/>
+      <rect x="964"  y="164" width="12" height="10"  fill="#EAF2FF" opacity="0.85"/>
+      <rect x="966"  y="166" width="8"  height="6"   fill="#FAFCFF" opacity="0.65"/>
+      <rect x="956"  y="216" width="14" height="12"  fill="#0C1422" opacity="0.96"/>
+      <rect x="1000" y="210" width="10" height="8"   fill="#141E2E" opacity="0.84"/>
+      <rect x="972"  y="282" width="20" height="16"  fill="#141E2E" opacity="0.90"/>
+      <rect x="976"  y="286" width="12" height="8"   fill="#0C1422" opacity="0.84"/>
+      <rect x="1142" y="116" width="12" height="8"   fill="#1C2738" opacity="0.78"/>
+      <rect x="1188" y="152" width="10" height="8"   fill="#1C2738" opacity="0.74"/>
+      <rect x="1192" y="230" width="12" height="8"   fill="#1C2738" opacity="0.76"/>
+      <rect x="1104" y="304" width="12" height="8"   fill="#1C2738" opacity="0.74"/>
+      <rect x="1048" y="312" width="10" height="8"   fill="#1C2738" opacity="0.72"/>
+      <rect x="1120" y="244" width="10" height="6"   fill="#1C2738" opacity="0.72"/>
+      <rect x="1168" y="184" width="10" height="6"   fill="#1C2738" opacity="0.70"/>
+      <rect x="1056" y="116" width="10" height="6"   fill="#1C2738" opacity="0.70"/>
+      <rect x="1218" y="208" width="10" height="6"   fill="#1C2738" opacity="0.70"/>
+      <rect x="1212" y="242" width="8"  height="4"   fill="#1C2738" opacity="0.66"/>
+      <rect x="1022" y="88"  width="8"  height="6"   fill="#1C2738" opacity="0.64"/>
+      <rect x="1224" y="124" width="6"  height="4"   fill="#1C2738" opacity="0.62"/>
+      <rect x="1088" y="140" width="8"  height="4"   fill="#1C2738" opacity="0.66"/>
+      <rect x="1178" y="242" width="8"  height="4"   fill="#1C2738" opacity="0.64"/>
+      <rect x="1030" y="242" width="8"  height="4"   fill="#1C2738" opacity="0.64"/>
+      <rect x="1102" y="318" width="6"  height="4"   fill="#1C2738" opacity="0.62"/>
+      <rect x="1170" y="118" width="6"  height="4"   fill="#1C2738" opacity="0.62"/>
+      <rect x="956"  y="142" width="6"  height="4"   fill="#1C2738" opacity="0.60"/>
+      <rect x="1236" y="172" width="6"  height="4"   fill="#1C2738" opacity="0.60"/>
+      <rect x="966"  y="168" width="16" height="4"   fill="#EAF2FF" opacity="0.44"/>
+      <rect x="1062" y="268" width="12" height="2"   fill="#D9E8FF" opacity="0.40"/>
+      <rect x="1208" y="160" width="10" height="2"   fill="#D9E8FF" opacity="0.52"/>
+      <rect x="1012" y="228" width="8"  height="2"   fill="#D9E8FF" opacity="0.38"/>
+      <rect x="1144" y="120" width="6"  height="2"   fill="#D9E8FF" opacity="0.36"/>
+      <rect x="1070" y="104" width="40" height="20"  fill="#5D6F96" opacity="0.14"/>
+      <rect x="1146" y="296" width="48" height="22"  fill="#5D6F96" opacity="0.12"/>
+      <rect x="1230" y="236" width="16" height="28"  fill="#5D6F96" opacity="0.14"/>
+      <rect x="980"  y="338" width="60" height="18"  fill="#5D6F96" opacity="0.12"/>
+      <rect x="1110" y="84"  width="32" height="16"  fill="#AFC6EC" opacity="0.18"/>
+
+      <!-- Surface scroll: -360px over 18s, linear, seamless loop -->
+      <animateTransform attributeName="transform" type="translate"
+                        values="0 0;-360 0" keyTimes="0;1"
+                        calcMode="linear" dur="18s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- ════ FIXED OVERLAYS (above animated surface, not clipped) ════ -->
+
+  <!-- Very mild upper-left highlight: suggests spherical form without gloss -->
+  <circle cx="740" cy="210" r="145" fill="url(#mhl)"/>
+
+  <!-- Limb darkening: edges darken, keeps the circle readable as a sphere -->
+  <circle cx="740" cy="210" r="145" fill="url(#mlimb)"/>
+
+  <!-- CRT screen-door grid overlay: fixed, sits on top of scrolling surface.
+       This is the "display screen" effect — dots are stationary while surface moves. -->
+  <circle cx="740" cy="210" r="145" fill="url(#crt)" opacity="0.38"/>
+
+  <!-- Crisp moon edge -->
+  <circle cx="740" cy="210" r="145" fill="none" stroke="#AFC6EC" stroke-width="1.2" opacity="0.55"/>
+  <!-- Subtle cyan rim -->
+  <circle cx="740" cy="210" r="145" fill="none" stroke="#28D7FE" stroke-width="1.0" opacity="0.22"/>
+  <!-- Outer bloom haze layers -->
+  <circle cx="740" cy="210" r="149" fill="none" stroke="#28D7FE" stroke-width="3"   opacity="0.06"/>
+  <circle cx="740" cy="210" r="154" fill="none" stroke="#28D7FE" stroke-width="2"   opacity="0.03"/>
 </svg>
