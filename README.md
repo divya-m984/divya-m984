@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:28D7FE,50:8B5CF6,100:4F8CFF&height=220&section=header&text=Divya%20M&fontSize=72&fontColor=F4F7FF&animation=fadeIn&fontAlignY=44&desc=Building%20across%20software%2C%20intelligent%20systems%2C%20infrastructure%20and%20impact&descAlignY=64&descSize=17&descColor=A7B2CE" width="100%" alt="Divya M — Building across software, intelligent systems, infrastructure and impact"/>
+<div align="center">
+  <img src="./assets/profile-banner.png" alt="Divya M profile banner" width="100%" />
+</div>
 
 <br/>
 
