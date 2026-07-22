@@ -104,49 +104,11 @@ An MLOps-driven sonar framework for coral reef habitat prediction, marine ecosys
 ## Technology Stack
 
 <div align="center">
-
-**Programming**
-
-<img src="https://skillicons.dev/icons?i=python,ts,js,html,css,bash&theme=dark" alt="Python, TypeScript, JavaScript, HTML, CSS, Bash"/>
-
-**Application Engineering**
-
-<img src="https://skillicons.dev/icons?i=react,vite,materialui,nodejs,express,nestjs,fastapi&theme=dark" alt="React, Vite, Material UI, Node.js, Express, NestJS, FastAPI"/>
-
-**Machine Learning and MLOps**
-
-<img src="https://img.shields.io/badge/Scikit--learn-0D1528?style=flat-square&logo=scikitlearn&logoColor=28D7FE" alt="Scikit-learn"/>
-&nbsp;
-<img src="https://img.shields.io/badge/XGBoost-0D1528?style=flat-square&logo=python&logoColor=8B5CF6" alt="XGBoost"/>
-&nbsp;
-<img src="https://img.shields.io/badge/MLflow-0D1528?style=flat-square&logo=mlflow&logoColor=4F8CFF" alt="MLflow"/>
-&nbsp;
-<img src="https://img.shields.io/badge/DVC-0D1528?style=flat-square&logo=dvc&logoColor=28D7FE" alt="DVC"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Streamlit-0D1528?style=flat-square&logo=streamlit&logoColor=8B5CF6" alt="Streamlit"/>
-
-**Data**
-
-<img src="https://skillicons.dev/icons?i=postgres,mongodb&theme=dark" alt="PostgreSQL, MongoDB"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Prisma-0D1528?style=flat-square&logo=prisma&logoColor=28D7FE" alt="Prisma"/>
-
-**Infrastructure and Automation**
-
-<img src="https://skillicons.dev/icons?i=docker,githubactions,git,github&theme=dark" alt="Docker, GitHub Actions, Git, GitHub"/>
-
-**Linux and Systems**
-
-<img src="https://skillicons.dev/icons?i=linux,arch&theme=dark" alt="Linux, Arch Linux"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Hyprland-0D1528?style=flat-square&logoColor=28D7FE" alt="Hyprland"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Zsh-0D1528?style=flat-square&logoColor=8B5CF6" alt="Zsh"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Kitty-0D1528?style=flat-square&logoColor=4F8CFF" alt="Kitty"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Waybar-0D1528?style=flat-square&logoColor=28D7FE" alt="Waybar"/>
-
+  <img
+    src="./assets/tech-stack-flight.svg"
+    alt="Animated technology stack visualization showing Divya M's programming, application engineering, machine learning, data, infrastructure and Linux systems stack"
+    width="100%"
+  />
 </div>
 
 ---
@@ -154,26 +116,16 @@ An MLOps-driven sonar framework for coral reef habitat prediction, marine ecosys
 ## GitHub Analytics
 
 <div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=divya-m984&show_icons=true&hide_border=true&bg_color=060B18&title_color=28D7FE&icon_color=8B5CF6&text_color=A7B2CE&ring_color=4F8CFF" height="180" alt="GitHub stats for divya-m984"/>
-&nbsp;&nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=divya-m984&layout=compact&hide_border=true&bg_color=060B18&title_color=28D7FE&text_color=A7B2CE" height="180" alt="Top languages for divya-m984"/>
-
-<br/><br/>
-
-<img src="https://streak-stats.demolab.com/?user=divya-m984&hide_border=true&background=060B18&ring=28D7FE&fire=8B5CF6&currStreakLabel=28D7FE&sideLabels=A7B2CE&dates=A7B2CE&stroke=1E2D4F" alt="GitHub streak for divya-m984"/>
-
-<br/><br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=divya-m984&bg_color=060B18&color=28D7FE&line=8B5CF6&point=4F8CFF&area=true&hide_border=true" width="100%" alt="Contribution activity graph for divya-m984"/>
-
-<br/>
-
-<img src="https://raw.githubusercontent.com/divya-m984/divya-m984/output/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub contribution snake animation — dark theme"/>
-
+  <img
+    src="./assets/github-analytics.svg"
+    alt="Animated GitHub analytics for divya-m984 showing contributions, streaks, activity and public repository languages"
+    width="100%"
+  />
 </div>
 
-<sub>Public repository language statistics reflect repository contents, not overall proficiency.</sub>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/divya-m984/divya-m984/output/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub contribution snake animation — dark theme"/>
+</div>
 
 ---
 

@@ -1,0 +1,54 @@
+name: Update GitHub Analytics
+
+on:
+  schedule:
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-analytics:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate analytics SVG
+        env:
+          GITHUB_USERNAME: divya-m984
+          GH_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+          OUTPUT_PATH: assets/github-analytics.svg
+        run: python scripts/generate-github-analytics.py
+
+      - name: Validate SVG exists and is well-formed XML
+        run: |
+          test -f assets/github-analytics.svg \
+            || { echo "ERROR: assets/github-analytics.svg was not created"; exit 1; }
+          python - <<'EOF'
+          import sys, xml.etree.ElementTree as ET
+          try:
+              ET.parse("assets/github-analytics.svg")
+              print("SVG XML validation passed")
+          except ET.ParseError as e:
+              print(f"ERROR: SVG is not valid XML: {e}", file=sys.stderr)
+              sys.exit(1)
+          EOF
+
+      - name: Commit and push if SVG changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/github-analytics.svg
+          git diff --cached --quiet \
+            && echo "No changes — skipping commit" \
+            && exit 0
+          git commit -m "Update GitHub analytics dashboard"
+          git push
