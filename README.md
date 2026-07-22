@@ -32,13 +32,9 @@
   />
 </p>
 
-## About
-
-I build across software engineering, machine-learning infrastructure, real-time applications, Linux systems and impact-focused technology. My projects range from full-stack platforms and MLOps pipelines to marine monitoring systems, sustainability applications and customized computing environments.
-
-I work through the full arc of a project — from initial research and architecture through prototype, implementation, testing and deployment. I am drawn to problems where technology connects to environmental systems, real-world infrastructure and meaningful outcomes.
-
-Currently building an MLOps framework for marine habitat monitoring, connecting sonar data pipelines to reef-health prediction and restoration decision support.
+## Hii, I'm Divya ⊹ ˖
+Welcome to my profilee ˖Ი𐑼⋆
+I'm a software dev that works in a wide range of sectors that interest me like machine-learning infrastructure, real-time applications, Linux systems and environmental and societal impact-focused technology. My projects range from full-stack platforms and MLOps pipelines to marine monitoring systems, sustainability applications and customized computing environments. Problems where technology connects to environmental issues, real-world infrastructure, and helping my society to reach meaningful outcomes draw my attention the most.
 
 <div align="center">
   <img
@@ -58,9 +54,9 @@ Currently building an MLOps framework for marine habitat monitoring, connecting 
 
 ## Current Work
 
-### Oceanographic
+### Oceanographic System for Coral Reefs: Preservation and Resttoration Project
 
-An MLOps-driven sonar framework for coral reef habitat prediction, marine ecosystem monitoring and restoration decision support.
+An MLOps-driven sonar framework for coral reef habitat prediction, marine ecosystem monitoring and restoration decision support. ݁
 
 **Core capabilities**
 
