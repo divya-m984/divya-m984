@@ -134,16 +134,26 @@ An MLOps-driven sonar framework for coral reef habitat prediction, marine ecosys
 ## GitHub Analytics
 
 <div align="center">
-  <img
-    src="./assets/github-analytics.svg"
-    alt="Animated GitHub analytics for divya-m984 showing contributions, streaks, activity and public repository languages"
-    width="100%"
-  />
+
+<img src="https://github-readme-stats.vercel.app/api?username=divya-m984&show_icons=true&hide_border=true&bg_color=060B18&title_color=28D7FE&icon_color=8B5CF6&text_color=A7B2CE&ring_color=4F8CFF" height="180" alt="GitHub stats for divya-m984"/>
+&nbsp;&nbsp;
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=divya-m984&layout=compact&hide_border=true&bg_color=060B18&title_color=28D7FE&text_color=A7B2CE" height="180" alt="Top languages for divya-m984"/>
+
+<br/><br/>
+
+<img src="https://streak-stats.demolab.com/?user=divya-m984&hide_border=true&background=060B18&ring=28D7FE&fire=8B5CF6&currStreakLabel=28D7FE&sideLabels=A7B2CE&dates=A7B2CE&stroke=1E2D4F" alt="GitHub streak for divya-m984"/>
+
+<br/><br/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=divya-m984&bg_color=060B18&color=28D7FE&line=8B5CF6&point=4F8CFF&area=true&hide_border=true" width="100%" alt="Contribution activity graph for divya-m984"/>
+
+<br/>
+
+<img src="https://raw.githubusercontent.com/divya-m984/divya-m984/output/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub contribution snake animation — dark theme"/>
+
 </div>
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/divya-m984/divya-m984/output/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub contribution snake animation — dark theme"/>
-</div>
+<sub>Public repository language statistics reflect repository contents, not overall proficiency.</sub>
 
 ---
 
