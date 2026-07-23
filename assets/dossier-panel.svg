@@ -52,24 +52,24 @@
   <line x1="478" y1="32" x2="478" y2="388" stroke="#1A2440" stroke-width="1"/>
 
   <!-- ════ LEFT COLUMN (unchanged) ════ -->
-  <text x="44" y="68"  font-family="monospace,Courier New,Courier" font-size="9"  fill="#8B5CF6" letter-spacing="3">NAME</text>
-  <text x="44" y="100" font-family="sans-serif,Arial,Helvetica"    font-size="27" fill="#F4F7FF" font-weight="300" letter-spacing="2">Divya M</text>
-  <line x1="44" y1="115" x2="455" y2="115" stroke="#1A2440" stroke-width="1"/>
-  <text x="44" y="138" font-family="monospace,Courier New,Courier" font-size="9"  fill="#8B5CF6" letter-spacing="3">INTERESTS</text>
-  <text x="44" y="160" font-family="sans-serif,Arial,Helvetica" font-size="12.5" fill="#9AA7C7">&#x2014; Software Engineering</text>
-  <text x="44" y="178" font-family="sans-serif,Arial,Helvetica" font-size="12.5" fill="#9AA7C7">&#x2014; Machine Learning &amp; MLOps</text>
-  <text x="44" y="196" font-family="sans-serif,Arial,Helvetica" font-size="12.5" fill="#9AA7C7">&#x2014; Linux Systems</text>
-  <text x="44" y="214" font-family="sans-serif,Arial,Helvetica" font-size="12.5" fill="#9AA7C7">&#x2014; Real-Time Systems</text>
-  <text x="44" y="232" font-family="sans-serif,Arial,Helvetica" font-size="12.5" fill="#9AA7C7">&#x2014; Sustainability Technology</text>
-  <text x="44" y="250" font-family="sans-serif,Arial,Helvetica" font-size="12.5" fill="#9AA7C7">&#x2014; Marine Technology</text>
-  <text x="44" y="268" font-family="sans-serif,Arial,Helvetica" font-size="12.5" fill="#9AA7C7">&#x2014; Cybersecurity</text>
-  <text x="44" y="286" font-family="sans-serif,Arial,Helvetica" font-size="12.5" fill="#9AA7C7">&#x2014; Open Source</text>
-  <line x1="44" y1="301" x2="455" y2="301" stroke="#1A2440" stroke-width="1"/>
-  <text x="44" y="323" font-family="monospace,Courier New,Courier" font-size="9"    fill="#8B5CF6" letter-spacing="3">SKILLS</text>
-  <text x="44" y="344" font-family="monospace,Courier New,Courier" font-size="10.5" fill="#6E8EFF">Python · TypeScript · JavaScript</text>
-  <text x="44" y="363" font-family="monospace,Courier New,Courier" font-size="10.5" fill="#6E8EFF">React · FastAPI · Node.js</text>
-  <text x="44" y="382" font-family="monospace,Courier New,Courier" font-size="10.5" fill="#6E8EFF">Docker · PostgreSQL · GitHub Actions</text>
-  <text x="44" y="401" font-family="monospace,Courier New,Courier" font-size="10.5" fill="#6E8EFF">Arch Linux · Scikit-learn · MLflow</text>
+  <text x="44" y="52"  font-family="monospace,Courier New,Courier" font-size="13" fill="#8B5CF6" letter-spacing="3">NAME</text>
+  <text x="44" y="86"  font-family="sans-serif,Arial,Helvetica"    font-size="30" fill="#F4F7FF" font-weight="300" letter-spacing="2">Divya M</text>
+  <line x1="44" y1="101" x2="455" y2="101" stroke="#1A2440" stroke-width="1"/>
+  <text x="44" y="120" font-family="monospace,Courier New,Courier" font-size="13" fill="#8B5CF6" letter-spacing="3">INTERESTS</text>
+  <text x="44" y="141" font-family="sans-serif,Arial,Helvetica" font-size="15" fill="#9AA7C7">&#x2014; Software Engineering</text>
+  <text x="44" y="160" font-family="sans-serif,Arial,Helvetica" font-size="15" fill="#9AA7C7">&#x2014; Machine Learning &amp; MLOps</text>
+  <text x="44" y="179" font-family="sans-serif,Arial,Helvetica" font-size="15" fill="#9AA7C7">&#x2014; Linux Systems</text>
+  <text x="44" y="198" font-family="sans-serif,Arial,Helvetica" font-size="15" fill="#9AA7C7">&#x2014; Real-Time Systems</text>
+  <text x="44" y="217" font-family="sans-serif,Arial,Helvetica" font-size="15" fill="#9AA7C7">&#x2014; Sustainability Technology</text>
+  <text x="44" y="236" font-family="sans-serif,Arial,Helvetica" font-size="15" fill="#9AA7C7">&#x2014; Marine Technology</text>
+  <text x="44" y="255" font-family="sans-serif,Arial,Helvetica" font-size="15" fill="#9AA7C7">&#x2014; Cybersecurity</text>
+  <text x="44" y="274" font-family="sans-serif,Arial,Helvetica" font-size="15" fill="#9AA7C7">&#x2014; Open Source</text>
+  <line x1="44" y1="290" x2="455" y2="290" stroke="#1A2440" stroke-width="1"/>
+  <text x="44" y="309" font-family="monospace,Courier New,Courier" font-size="13" fill="#8B5CF6" letter-spacing="3">SKILLS</text>
+  <text x="44" y="330" font-family="monospace,Courier New,Courier" font-size="13" fill="#6E8EFF">Python · TypeScript · JavaScript</text>
+  <text x="44" y="349" font-family="monospace,Courier New,Courier" font-size="13" fill="#6E8EFF">React · FastAPI · Node.js</text>
+  <text x="44" y="368" font-family="monospace,Courier New,Courier" font-size="13" fill="#6E8EFF">Docker · PostgreSQL · GitHub Actions</text>
+  <text x="44" y="387" font-family="monospace,Courier New,Courier" font-size="13" fill="#6E8EFF">Arch Linux · Scikit-learn · MLflow</text>
 
   <!-- ════ RIGHT COLUMN — PIXELATED MOON ════ -->
 
