@@ -195,31 +195,7 @@ I am interested in working on:
 
 If you are working on something in these areas, reach out through GitHub.
 
-<p align="center">
-  <img
-    src="./assets/animated-divider.svg"
-    alt=""
-    width="100%"
-  />
-</p>
-
 <div align="center">
-  <img
-    src="./assets/system-status.svg"
-    alt="Animated system status showing active development and open-source focus"
-    width="760"
-  />
-</div>
-
----
-
-<div align="center">
-
-<br/>
-
-<code>STATUS: ACTIVE &nbsp;&nbsp;|&nbsp;&nbsp; CURRENT MODE: BUILDING &nbsp;&nbsp;|&nbsp;&nbsp; NEXT TARGET: OPEN SOURCE</code>
-
-<br/><br/>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4F8CFF,50:8B5CF6,100:28D7FE&height=120&section=footer" width="100%" alt="Footer"/>
 
