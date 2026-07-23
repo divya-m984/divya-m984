@@ -141,7 +141,7 @@ An MLOps-driven sonar framework for coral reef habitat prediction, marine ecosys
 
 <br/><br/>
 
-<img src="https://streak-stats.demolab.com/?user=divya-m984&hide_border=true&background=060B18&ring=28D7FE&fire=8B5CF6&currStreakLabel=28D7FE&sideLabels=A7B2CE&dates=A7B2CE&stroke=1E2D4F" alt="GitHub streak for divya-m984"/>
+<img src="https://streak-stats.demolab.com/?user=divya-m984&hide_border=true&background=060B18&ring=28D7FE&fire=8B5CF6&currStreakLabel=28D7FE&sideLabels=A7B2CE&dates=A7B2CE&stroke=1E2D4F&sideNums=F4F7FF&currStreakNum=28D7FE" alt="GitHub streak for divya-m984"/>
 
 <br/><br/>
 
