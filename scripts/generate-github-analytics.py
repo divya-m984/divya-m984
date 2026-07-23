@@ -349,13 +349,15 @@ def generate_svg(
 ) -> str:
     """Build and return the complete animated SVG string."""
 
-    W, H = 1200, 650
+    # Canvas sized to 900×490 so it renders at roughly 1:1 on GitHub's ~904 px
+    # profile width, keeping all text legible without any browser scaling.
+    W, H = 900, 490
 
     # Graph canvas bounds
-    GX1, GY1 = 80.0, 195.0
-    GX2, GY2 = 1160.0, 448.0
-    GW = GX2 - GX1   # 1080
-    GH = GY2 - GY1   # 253
+    GX1, GY1 = 60.0, 146.0
+    GX2, GY2 = 870.0, 336.0
+    GW = GX2 - GX1   # 810
+    GH = GY2 - GY1   # 190
 
     # Weekly aggregation
     week_dates, week_counts = group_by_week(days)
@@ -464,81 +466,81 @@ def generate_svg(
     a("</defs>")
 
     # ── Background + border ───────────────────────────────────────────────────
-    a('<rect width="1200" height="650" fill="url(#bg)"/>')
+    a(f'<rect width="{W}" height="{H}" fill="url(#bg)"/>')
     a(
-        '<rect x="1" y="1" width="1198" height="648" rx="8" ry="8"'
-        ' fill="none" stroke="url(#border)" stroke-width="1.5" opacity="0.75"/>'
+        f'<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="8" ry="8"'
+        f' fill="none" stroke="url(#border)" stroke-width="1.5" opacity="0.75"/>'
     )
 
     # ── Header ────────────────────────────────────────────────────────────────
-    a('<line x1="40" y1="66" x2="1160" y2="66" stroke="#1A2840" stroke-width="1"/>')
+    a('<line x1="30" y1="50" x2="870" y2="50" stroke="#1A2840" stroke-width="1"/>')
 
     a(
-        '<text x="40" y="40"'
+        '<text x="30" y="30"'
         ' font-family="\'Courier New\',monospace"'
-        ' font-size="12" font-weight="700" letter-spacing="3.5"'
+        ' font-size="9" font-weight="700" letter-spacing="2.6"'
         f' fill="#28D7FE" opacity="0.9">GITHUB ANALYTICS</text>'
     )
     a(
-        f'<text x="40" y="58"'
+        f'<text x="30" y="43"'
         f' font-family="\'Courier New\',monospace"'
-        f' font-size="9" letter-spacing="1.5"'
+        f' font-size="7" letter-spacing="1.1"'
         f' fill="#4F8CFF" opacity="0.6">{xe(USERNAME)}</text>'
     )
     a(
-        f'<text x="1160" y="40" text-anchor="end"'
+        f'<text x="870" y="30" text-anchor="end"'
         f' font-family="\'Courier New\',monospace"'
-        f' font-size="9" letter-spacing="1.5"'
+        f' font-size="7" letter-spacing="1.1"'
         f' fill="#A7B2CE" opacity="0.5">UPDATED {xe(updated_utc)} UTC</text>'
     )
     a(
-        f'<text x="1160" y="57" text-anchor="end"'
+        f'<text x="870" y="43" text-anchor="end"'
         f' font-family="\'Courier New\',monospace"'
-        f' font-size="8" letter-spacing="1"'
+        f' font-size="6" letter-spacing="0.75"'
         f' fill="#4F8CFF" opacity="0.4">{xe(date_range)}</text>'
     )
 
     # ── Stat boxes ────────────────────────────────────────────────────────────
-    # Three equal-width boxes: x=40 / x=430 / x=820, each 350px wide, gap 40px
+    # Three equal-width boxes: x=30 / x=323 / x=616, each 260px wide, gap 33px
     boxes = [
-        (40,  350, "CONTRIBUTIONS",  "LAST 12 MONTHS",   str(total),          "#28D7FE"),
-        (430, 350, "CURRENT STREAK", "CONSECUTIVE DAYS",  str(current_streak), "#8B5CF6"),
-        (820, 350, "LONGEST STREAK", "IN PERIOD",         str(longest_streak), "#4F8CFF"),
+        (30,  260, "CONTRIBUTIONS",  "LAST 12 MONTHS",   str(total),          "#28D7FE"),
+        (323, 260, "CURRENT STREAK", "CONSECUTIVE DAYS",  str(current_streak), "#8B5CF6"),
+        (616, 260, "LONGEST STREAK", "IN PERIOD",         str(longest_streak), "#4F8CFF"),
     ]
 
     for bx, bw, cat, sub, val, col in boxes:
         a(
-            f'<rect x="{bx}" y="80" width="{bw}" height="88"'
+            f'<rect x="{bx}" y="60" width="{bw}" height="66"'
             f' rx="4" fill="#080F1F" opacity="0.85"/>'
         )
         a(
-            f'<rect x="{bx}" y="80" width="{bw}" height="2"'
+            f'<rect x="{bx}" y="60" width="{bw}" height="2"'
             f' rx="1" fill="{col}" opacity="0.65"/>'
         )
         a(
-            f'<text x="{bx + 16}" y="99"'
+            f'<text x="{bx + 12}" y="74"'
             f' font-family="\'Courier New\',monospace"'
-            f' font-size="8" font-weight="700" letter-spacing="2"'
+            f' font-size="6" font-weight="700" letter-spacing="1.5"'
             f' fill="{col}" opacity="0.85">{xe(cat)}</text>'
         )
         a(
-            f'<text x="{bx + 16}" y="111"'
+            f'<text x="{bx + 12}" y="83"'
             f' font-family="\'Courier New\',monospace"'
-            f' font-size="7.5" letter-spacing="1.5"'
+            f' font-size="6" letter-spacing="1.1"'
             f' fill="#A7B2CE" opacity="0.45">{xe(sub)}</text>'
         )
         a(
-            f'<text x="{bx + 16}" y="154"'
+            f'<text x="{bx + 12}" y="116"'
             f' font-family="\'Courier New\',monospace"'
-            f' font-size="38" font-weight="700"'
+            f' font-size="29" font-weight="700"'
             f' fill="{col}" filter="url(#cx)">{xe(val)}</text>'
         )
 
     # ── Graph section label ───────────────────────────────────────────────────
     a(
-        f'<text x="40" y="{GY1 - 10:.0f}"'
+        f'<text x="45" y="{GY1 - 8:.0f}"'
         f' font-family="\'Courier New\',monospace"'
-        f' font-size="8" font-weight="700" letter-spacing="2.5"'
+        f' font-size="6" font-weight="700" letter-spacing="1.9"'
         f' fill="#A7B2CE" opacity="0.4">CONTRIBUTION ACTIVITY</text>'
     )
 
@@ -558,23 +560,23 @@ def generate_svg(
         )
         if gval > 0:
             a(
-                f'<text x="{GX1 - 6}" y="{gy + 3.5:.1f}" text-anchor="end"'
+                f'<text x="{GX1 - 6}" y="{gy + 3:.1f}" text-anchor="end"'
                 f' font-family="\'Courier New\',monospace"'
-                f' font-size="7.5" fill="#4F8CFF" opacity="0.4">{gval}</text>'
+                f' font-size="6" fill="#4F8CFF" opacity="0.4">{gval}</text>'
             )
 
     # Month labels (x-axis); skip labels that would overlap
     prev_mx = -999.0
     for mx, mlabel in markers:
-        if mx - prev_mx >= 58:
+        if mx - prev_mx >= 44:
             a(
-                f'<line x1="{mx:.1f}" y1="{GY2}" x2="{mx:.1f}" y2="{GY2 + 4}"'
+                f'<line x1="{mx:.1f}" y1="{GY2}" x2="{mx:.1f}" y2="{GY2 + 3}"'
                 f' stroke="#182336" stroke-width="1" opacity="0.7"/>'
             )
             a(
-                f'<text x="{mx:.1f}" y="{GY2 + 14}" text-anchor="middle"'
+                f'<text x="{mx:.1f}" y="{GY2 + 11}" text-anchor="middle"'
                 f' font-family="\'Courier New\',monospace"'
-                f' font-size="7.5" fill="#A7B2CE" opacity="0.38">{xe(mlabel)}</text>'
+                f' font-size="6" fill="#A7B2CE" opacity="0.38">{xe(mlabel)}</text>'
             )
             prev_mx = mx
 
@@ -593,7 +595,7 @@ def generate_svg(
         # 2. Violet glow line (wider, blurred) — draws alongside main line
         a(
             f'<path d="{xe(line_path)}"'
-            f' fill="none" stroke="#8B5CF6" stroke-width="8"'
+            f' fill="none" stroke="#8B5CF6" stroke-width="6"'
             f' opacity="0.22" filter="url(#vx)" clip-path="url(#gc)"'
             f' stroke-dasharray="10000 10000" stroke-dashoffset="10000">'
         )
@@ -604,7 +606,7 @@ def generate_svg(
         # 3. Main cyan line — draws from left to right
         a(
             f'<path id="analytics-line" d="{xe(line_path)}"'
-            f' fill="none" stroke="#28D7FE" stroke-width="2.5"'
+            f' fill="none" stroke="#28D7FE" stroke-width="2"'
             f' stroke-linecap="round" stroke-linejoin="round"'
             f' filter="url(#cx)" clip-path="url(#gc)"'
             f' stroke-dasharray="10000 10000" stroke-dashoffset="10000">'
@@ -614,7 +616,7 @@ def generate_svg(
         a("</path>")
 
         # 4. Moving cyan dot along the path (loops indefinitely)
-        a('<circle r="4.5" fill="#28D7FE" opacity="0.92" filter="url(#cx)"'
+        a('<circle r="3.5" fill="#28D7FE" opacity="0.92" filter="url(#cx)"'
           ' clip-path="url(#gc)">')
         a('  <animateMotion dur="14s" repeatCount="indefinite">')
         a(f'    <mpath xlink:href="#analytics-line"/>')
@@ -623,12 +625,12 @@ def generate_svg(
 
         # 5. Scanning vertical highlight — slow sweep, low opacity
         a(
-            f'<rect y="{GY1:.0f}" width="50" height="{GH:.0f}"'
+            f'<rect y="{GY1:.0f}" width="38" height="{GH:.0f}"'
             f' fill="url(#scan)" clip-path="url(#gc)" opacity="0.9">'
         )
         a(
             f'  <animate attributeName="x"'
-            f' from="{GX1 - 50:.0f}" to="{GX2:.0f}"'
+            f' from="{GX1 - 38:.0f}" to="{GX2:.0f}"'
             f' dur="9s" repeatCount="indefinite" calcMode="linear"/>'
         )
         a("</rect>")
@@ -636,7 +638,7 @@ def generate_svg(
         # 6. Pulse dots at the top 3 contribution peaks
         for px, py in peak_pts:
             a(
-                f'<circle cx="{px:.1f}" cy="{py:.1f}" r="3"'
+                f'<circle cx="{px:.1f}" cy="{py:.1f}" r="2.5"'
                 f' fill="#8B5CF6" opacity="0" clip-path="url(#gc)">'
             )
             # Appear after line finishes drawing
@@ -644,7 +646,7 @@ def generate_svg(
               ' from="0" to="0.85" dur="0.4s" begin="3.2s" fill="freeze"/>')
             # Then pulse
             a('  <animate attributeName="r"'
-              ' values="3;5.5;3" dur="2.8s" begin="3.6s" repeatCount="indefinite"/>')
+              ' values="2.5;4.5;2.5" dur="2.8s" begin="3.6s" repeatCount="indefinite"/>')
             a('  <animate attributeName="opacity"'
               ' values="0.85;0.25;0.85" dur="2.8s" begin="3.6s" repeatCount="indefinite"/>')
             a("</circle>")
@@ -655,46 +657,46 @@ def generate_svg(
             f'<text x="{(GX1 + GX2) / 2:.0f}" y="{(GY1 + GY2) / 2:.0f}"'
             f' text-anchor="middle"'
             f' font-family="\'Courier New\',monospace"'
-            f' font-size="11" fill="#A7B2CE" opacity="0.35">'
+            f' font-size="8" fill="#A7B2CE" opacity="0.35">'
             f'No contribution data returned for this period</text>'
         )
 
     # ── Language bars ─────────────────────────────────────────────────────────
-    LY = 476.0          # section top
-    BAR_X = 220.0       # bar left edge
-    BAR_W = 876.0       # bar maximum width
-    BAR_H = 10.0        # bar height
-    ROW_H = 22.0        # pixels per language row
+    LY = 357.0          # section top
+    BAR_X = 165.0       # bar left edge
+    BAR_W = 657.0       # bar maximum width
+    BAR_H = 8.0         # bar height
+    ROW_H = 17.0        # pixels per language row
 
     a(
-        f'<text x="40" y="{LY - 9:.0f}"'
+        f'<text x="45" y="{LY - 7:.0f}"'
         f' font-family="\'Courier New\',monospace"'
-        f' font-size="8" font-weight="700" letter-spacing="2.5"'
+        f' font-size="6" font-weight="700" letter-spacing="1.9"'
         f' fill="#A7B2CE" opacity="0.4">LANGUAGE DISTRIBUTION</text>'
     )
 
     if top5:
         for i, (lang_name, lang_bytes) in enumerate(top5):
-            ry = LY + 4 + i * ROW_H
+            ry = LY + 3 + i * ROW_H
             pct = lang_bytes / total_lang * 100.0
             bw = (lang_bytes / total_lang) * BAR_W
             col = lang_colors.get(lang_name, "#8888AA")
 
             # Language name label
             a(
-                f'<text x="{BAR_X - 8:.0f}" y="{ry + BAR_H:.0f}" text-anchor="end"'
+                f'<text x="{BAR_X - 6:.0f}" y="{ry + BAR_H:.0f}" text-anchor="end"'
                 f' font-family="\'Courier New\',monospace"'
-                f' font-size="8.5" fill="#A7B2CE" opacity="0.75">{xe(lang_name)}</text>'
+                f' font-size="6.5" fill="#A7B2CE" opacity="0.75">{xe(lang_name)}</text>'
             )
             # Track (background)
             a(
                 f'<rect x="{BAR_X}" y="{ry}" width="{BAR_W}" height="{BAR_H}"'
-                f' rx="3" fill="#0A1525" opacity="0.8"/>'
+                f' rx="2" fill="#0A1525" opacity="0.8"/>'
             )
             # Filled bar — animates in
             a(
                 f'<rect x="{BAR_X}" y="{ry}" width="0" height="{BAR_H}"'
-                f' rx="3" fill="{xe(col)}" opacity="0.82">'
+                f' rx="2" fill="{xe(col)}" opacity="0.82">'
             )
             a(
                 f'  <animate attributeName="width" from="0" to="{bw:.2f}"'
@@ -703,24 +705,24 @@ def generate_svg(
             a("</rect>")
             # Percentage label
             a(
-                f'<text x="{BAR_X + BAR_W + 8:.0f}" y="{ry + BAR_H:.0f}"'
+                f'<text x="{BAR_X + BAR_W + 6:.0f}" y="{ry + BAR_H:.0f}"'
                 f' font-family="\'Courier New\',monospace"'
-                f' font-size="8.5" fill="{xe(col)}" opacity="0.75">{pct:.1f}%</text>'
+                f' font-size="6.5" fill="{xe(col)}" opacity="0.75">{pct:.1f}%</text>'
             )
     else:
         a(
-            f'<text x="{BAR_X}" y="{LY + 28}"'
+            f'<text x="{BAR_X}" y="{LY + 21}"'
             f' font-family="\'Courier New\',monospace"'
-            f' font-size="9" fill="#A7B2CE" opacity="0.35">'
+            f' font-size="7" fill="#A7B2CE" opacity="0.35">'
             f'No public repository language data available</text>'
         )
 
     # ── Footer ────────────────────────────────────────────────────────────────
-    a('<line x1="40" y1="620" x2="1160" y2="620" stroke="#182336" stroke-width="1" opacity="0.6"/>')
+    a('<line x1="30" y1="465" x2="870" y2="465" stroke="#182336" stroke-width="1" opacity="0.6"/>')
     a(
-        '<text x="600" y="637" text-anchor="middle"'
+        '<text x="450" y="478" text-anchor="middle"'
         ' font-family="\'Courier New\',monospace"'
-        ' font-size="7.5" fill="#A7B2CE" opacity="0.3">'
+        ' font-size="6" fill="#A7B2CE" opacity="0.3">'
         "Public repository language distribution reflects repository contents, not proficiency."
         "</text>"
     )

@@ -1,6 +1,12 @@
 name: Update GitHub Analytics
 
 on:
+push:
+  branches:
+    - main
+  paths:
+    - "scripts/generate-github-analytics.py"
+    - ".github/workflows/github-analytics.yml"
   schedule:
     - cron: "30 3 * * *"
   workflow_dispatch:
