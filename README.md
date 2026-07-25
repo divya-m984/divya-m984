@@ -153,7 +153,6 @@ An MLOps-driven sonar framework for coral reef habitat prediction, marine ecosys
 
 </div>
 
-<sub>Public repository language statistics reflect repository contents, not overall proficiency.</sub>
 
 ---
 
